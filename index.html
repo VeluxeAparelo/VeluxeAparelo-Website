@@ -3,60 +3,76 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="VeluxeAparelo - Plataforma profesional para gestión y administración de comunidades.">
+  <meta name="author" content="VeluxeAparelo Team">
   <title>VeluxeAparelo</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <header>
-    <h1>VeluxeAparelo</h1>
-    <nav>
-      <ul>
-        <li><a href="#inicio">Inicio</a></li>
-        <li><a href="#nosotros">Sobre Nosotros</a></li>
-        <li><a href="#servicios">Servicios</a></li>
-        <li><a href="#contacto">Contacto</a></li>
-      </ul>
-    </nav>
+    <div class="container">
+      <h1 class="logo">VeluxeAparelo</h1>
+      <nav aria-label="Navegación principal">
+        <ul class="nav-links">
+          <li><a href="#inicio">Inicio</a></li>
+          <li><a href="#nosotros">Sobre Nosotros</a></li>
+          <li><a href="#servicios">Servicios</a></li>
+          <li><a href="#contacto">Contacto</a></li>
+        </ul>
+      </nav>
+    </div>
   </header>
 
-  <section id="inicio" class="section">
-    <div class="content">
-      <h2>Bienvenido a VeluxeAparelo</h2>
-      <p>Gestión y administración de comunidades. Simple. Seguro. Poderoso.</p>
-    </div>
-  </section>
+  <main>
+    <section id="inicio" class="section">
+      <div class="content">
+        <h2>Bienvenido a VeluxeAparelo</h2>
+        <p>Gestión y administración de comunidades. Simple. Seguro. Poderoso.</p>
+      </div>
+    </section>
 
-  <section id="nosotros" class="section">
-    <div class="content">
-      <h2>¿Quiénes somos?</h2>
-      <p>VeluxeAparelo es una plataforma pensada para la administración de espacios comunitarios. Estamos aquí para facilitar la organización.</p>
-    </div>
-  </section>
+    <section id="nosotros" class="section">
+      <div class="content">
+        <h2>¿Quiénes somos?</h2>
+        <p>VeluxeAparelo es una plataforma profesional diseñada para facilitar la organización y administración eficiente de comunidades digitales.</p>
+      </div>
+    </section>
 
-  <section id="servicios" class="section">
-    <div class="content">
-      <h2>Servicios</h2>
-      <ul class="lista-servicios">
-        <li>Gestión de usuarios</li>
-        <li>Seguridad de servidores</li>
-        <li>Automatización de roles</li>
-        <li>Soporte técnico dedicado</li>
-      </ul>
-    </div>
-  </section>
+    <section id="servicios" class="section">
+      <div class="content">
+        <h2>Servicios</h2>
+        <ul class="lista-servicios">
+          <li>Gestión de usuarios</li>
+          <li>Seguridad avanzada para servidores</li>
+          <li>Automatización de roles y permisos</li>
+          <li>Soporte técnico personalizado</li>
+        </ul>
+      </div>
+    </section>
 
-  <section id="contacto" class="section">
-    <div class="content">
-      <h2>Contacto</h2>
-      <p>¿Tienes dudas? Contáctanos por Discord o envíanos un mensaje.</p>
-      <button onclick="mostrarMensaje()">Enviar mensaje</button>
-    </div>
-  </section>
+    <section id="contacto" class="section">
+      <div class="content">
+        <h2>Contacto</h2>
+        <p>¿Tienes dudas o deseas colaborar con nosotros? Contáctanos a través de los siguientes medios:</p>
+
+        <div class="contact-links">
+          <a href="https://instagram.com/veluxeaparelo" target="_blank" rel="noopener">Instagram</a>
+          <a href="https://www.tiktok.com/@veluxeaparelo" target="_blank" rel="noopener">TikTok</a>
+          <a href="mailto:contacto@veluxeaparelo.com">contacto@veluxeaparelo.com</a>
+        </div>
+
+        <button onclick="mostrarMensaje()" aria-label="Enviar mensaje de contacto">Enviar mensaje</button>
+      </div>
+    </section>
+  </main>
 
   <footer>
-    <p>&copy; 2025 VeluxeAparelo. Todos los derechos reservados.</p>
+    <div class="container">
+      <p>&copy; 2025 VeluxeAparelo. Todos los derechos reservados.</p>
+    </div>
   </footer>
 
   <script src="script.js"></script>
 </body>
 </html>
+

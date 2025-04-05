@@ -1,67 +1,34 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="VeluxeAparelo - Plataforma profesional para gestión y administración de comunidades.">
-  <meta name="author" content="VeluxeAparelo Team">
-  <title>VeluxeAparelo</title>
-  <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="VeluxeAparelo - Plataforma profesional de administración de comunidades.">
+  <title>Inicio | VeluxeAparelo</title>
+  <link rel="stylesheet" href="assets/css/style.css" />
 </head>
 <body>
   <header>
     <div class="container">
       <h1 class="logo">VeluxeAparelo</h1>
-      <nav aria-label="Navegación principal">
+      <nav>
         <ul class="nav-links">
-          <li><a href="#inicio">Inicio</a></li>
-          <li><a href="#nosotros">Sobre Nosotros</a></li>
-          <li><a href="#servicios">Servicios</a></li>
-          <li><a href="#contacto">Contacto</a></li>
+          <li><a href="index.html" class="active">Inicio</a></li>
+          <li><a href="sobre.html">Sobre Nosotros</a></li>
+          <li><a href="servicios.html">Servicios</a></li>
+          <li><a href="faq.html">FAQ</a></li>
+          <li><a href="contacto.html">Contacto</a></li>
         </ul>
       </nav>
     </div>
   </header>
 
   <main>
-    <section id="inicio" class="section">
+    <section id="hero" class="section hero">
       <div class="content">
         <h2>Bienvenido a VeluxeAparelo</h2>
         <p>Gestión y administración de comunidades. Simple. Seguro. Poderoso.</p>
-      </div>
-    </section>
-
-    <section id="nosotros" class="section">
-      <div class="content">
-        <h2>¿Quiénes somos?</h2>
-        <p>VeluxeAparelo es una plataforma profesional diseñada para facilitar la organización y administración eficiente de comunidades digitales.</p>
-      </div>
-    </section>
-
-    <section id="servicios" class="section">
-      <div class="content">
-        <h2>Servicios</h2>
-        <ul class="lista-servicios">
-          <li>Gestión de usuarios</li>
-          <li>Seguridad avanzada para servidores</li>
-          <li>Automatización de roles y permisos</li>
-          <li>Soporte técnico personalizado</li>
-        </ul>
-      </div>
-    </section>
-
-    <section id="contacto" class="section">
-      <div class="content">
-        <h2>Contacto</h2>
-        <p>¿Tienes dudas o deseas colaborar con nosotros? Contáctanos a través de los siguientes medios:</p>
-
-        <div class="contact-links">
-          <a href="https://instagram.com/veluxeaparelo" target="_blank" rel="noopener">Instagram</a>
-          <a href="https://www.tiktok.com/@veluxeaparelo" target="_blank" rel="noopener">TikTok</a>
-          <a href="mailto:contacto@veluxeaparelo.com">contacto@veluxeaparelo.com</a>
-        </div>
-
-        <button onclick="mostrarMensaje()" aria-label="Enviar mensaje de contacto">Enviar mensaje</button>
+        <a href="sobre.html" class="btn">Explorar más</a>
       </div>
     </section>
   </main>
@@ -72,7 +39,7 @@
     </div>
   </footer>
 
-  <script src="script.js"></script>
+  <script src="assets/js/script.js"></script>
 </body>
 </html>
 

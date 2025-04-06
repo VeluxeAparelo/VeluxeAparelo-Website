@@ -166,90 +166,117 @@ header:hover {
 
 
 
+
+/* Estilos generales para la sección de roles */
 .section.equipo {
   padding: 5rem 1rem;
-  background-color: #111;
+  background-color: #111; /* Fondo negro */
   text-align: center;
+  color: #fff; /* Texto blanco */
 }
 
 .section.equipo h2 {
-  font-size: 2.5rem;
-  margin-bottom: 1.5rem;
-  color: #fff;
+  font-size: 2.8rem;
+  margin-bottom: 2rem;
+  color: #fff; /* Título en blanco */
+  font-weight: 700;
+  text-transform: uppercase;
 }
 
 .section.equipo p {
   max-width: 800px;
   margin: 0 auto 3rem;
-  color: #ccc;
+  color: #ccc; /* Texto en gris claro */
+  font-size: 1.1rem;
 }
 
-.team-container {
+/* Estilo para la lista de roles */
+.roles-list {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 2rem;
+  margin-top: 3rem;
+}
+
+.rol {
+  background-color: #222; /* Fondo oscuro para los roles */
+  padding: 2.5rem;
+  border-radius: 8px;
+  border: 1px solid #333;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+  transition: all 0.3s ease;
   display: flex;
-  justify-content: center;
-  gap: 3rem;
-  flex-wrap: wrap;
+  align-items: center;
+  gap: 1.5rem;
+  text-align: left;
+  cursor: pointer;
+  opacity: 0.9;
 }
 
-.team-member {
-  background-color: #222;
-  padding: 2rem;
-  border-radius: 10px;
-  width: 250px;
-  text-align: center;
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+.rol:hover {
+  transform: translateY(-10px); /* Efecto de hover */
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
+  opacity: 1;
 }
 
-.team-member:hover {
-  transform: translateY(-10px);
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+.rol i {
+  font-size: 2.5rem; /* Iconos más grandes */
+  color: #fff; /* Iconos blancos */
+  transition: color 0.3s ease;
 }
 
-.team-photo {
-  width: 100%;
-  height: 250px;
-  object-fit: cover;
-  border-radius: 50%;
+.rol:hover i {
+  color: #1db0d5; /* Cambio de color de los iconos cuando se pasa el cursor */
+}
+
+/* Títulos de los roles */
+.rol h3 {
+  color: #fff; /* Títulos en blanco */
+  font-size: 1.8rem;
+  font-weight: 600;
   margin-bottom: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
 }
 
-.team-info h3 {
-  font-size: 1.5rem;
-  color: #fff;
-  margin-bottom: 0.5rem;
+/* Estilo para las descripciones de los roles */
+.rol p {
+  color: #ccc; /* Descripción en gris claro */
+  font-size: 1.1rem;
+  line-height: 1.7; /* Aumenta el espacio entre líneas */
+  margin-top: 1rem;
+  text-align: justify;
+  transition: color 0.3s ease; /* Efecto de transición para el texto */
 }
 
-.team-info .role {
-  font-size: 1.2rem;
-  color: #1db0d5;
-  margin-bottom: 1rem;
+.rol p:hover {
+  color: #1db0d5; /* Color dinámico para las descripciones al pasar el cursor */
+  font-weight: 500; /* Negrita cuando se pasa el cursor */
 }
 
-.team-info p {
-  color: #ccc;
-  margin-bottom: 1.5rem;
+/* Añadir una caja con borde y sombra para hacer la descripción más destacada */
+.rol p {
+  padding: 1rem;
+  background-color: #333; /* Fondo oscuro para las descripciones */
+  border-radius: 5px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+  margin-top: 1.5rem;
+  transition: background-color 0.3s ease;
 }
 
-.social-links a {
-  color: #fff;
-  margin: 0 10px;
-  font-size: 1.5rem;
+.rol p:hover {
+  background-color: #000000; /* Fondo más claro cuando se pasa el cursor */
 }
 
-.social-links a:hover {
-  color: #1db0d5;
-}
-
-/* Responsivo */
-@media (max-width: 768px) {
-  .team-container {
-    flex-direction: column;
-    align-items: center;
+/* Estilo responsivo */
+@media (max-width: 1024px) {
+  .roles-list {
+    grid-template-columns: 1fr 1fr;
   }
+}
 
-  .team-member {
-    width: 80%;
-    margin-bottom: 2rem;
+@media (max-width: 768px) {
+  .roles-list {
+    grid-template-columns: 1fr;
   }
 }

@@ -157,6 +157,18 @@ header:hover {
   }
 }
 
+/* Footer */
+footer {
+  background-color: #111;
+  padding: 20px 0;
+  text-align: center;
+}
+
+footer p {
+  color: #bbb;
+  font-size: 0.9rem;
+}
+
 
 
 
@@ -173,7 +185,7 @@ header:hover {
 /* Estilos generales para la sección de servicios */
 .section.services {
   padding: 5rem 2rem;
-  background-color: #000;
+  background-color: #111;
   text-align: center;
   border-top: 2px solid #444;
 }

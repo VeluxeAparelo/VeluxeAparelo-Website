@@ -157,6 +157,17 @@ header:hover {
   }
 }
 
+/* Footer */
+footer {
+  background-color: #111;
+  padding: 20px 0;
+  text-align: center;
+}
+
+footer p {
+  color: #bbb;
+  font-size: 0.9rem;
+}
 
 
 
@@ -167,7 +178,7 @@ header:hover {
 /* About Section */
 .section.about {
   padding: 5rem 2rem;
-  background-color: #000;
+  background-color: #111;
   text-align: center;
   border-top: 2px solid #444;
 }

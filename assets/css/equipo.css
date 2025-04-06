@@ -157,6 +157,18 @@ header:hover {
   }
 }
 
+/* Footer */
+footer {
+  background-color: #111;
+  padding: 20px 0;
+  text-align: center;
+}
+
+footer p {
+  color: #bbb;
+  font-size: 0.9rem;
+}
+
 
 
 

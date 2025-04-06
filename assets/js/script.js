@@ -4,3 +4,10 @@ document.querySelectorAll('.faq-item h3').forEach(item => {
     item.parentElement.classList.toggle('active');
   });
 });
+
+// Selecciona todas las casillas de rol y añade un listener para el click
+document.querySelectorAll('.rol').forEach(rol => {
+  rol.addEventListener('click', () => {
+    rol.classList.toggle('active');
+  });
+});

@@ -167,71 +167,77 @@ header:hover {
 
 
 
-/* Estilos generales para la sección de roles */
+/* Sección Equipo - Roles */
 .section.equipo {
   padding: 5rem 1rem;
   background-color: #111; /* Fondo negro */
   text-align: center;
-  color: #fff; /* Texto blanco */
+  color: #fff; /* Texto en blanco */
 }
 
 .section.equipo h2 {
   font-size: 2.8rem;
   margin-bottom: 2rem;
-  color: #fff; /* Título en blanco */
+  color: #fff;
   font-weight: 700;
   text-transform: uppercase;
+  letter-spacing: 1px;
 }
 
 .section.equipo p {
   max-width: 800px;
   margin: 0 auto 3rem;
-  color: #ccc; /* Texto en gris claro */
+  color: #ccc;
   font-size: 1.1rem;
 }
 
-/* Estilo para la lista de roles */
+/* Lista de roles */
 .roles-list {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 2rem;
   margin-top: 3rem;
 }
 
+/* Cada rol */
 .rol {
-  background-color: #222; /* Fondo oscuro para los roles */
+  background-color: #222; /* Fondo oscuro */
   padding: 2.5rem;
   border-radius: 8px;
   border: 1px solid #333;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
-  transition: all 0.3s ease;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, opacity 0.3s ease;
   display: flex;
-  align-items: center;
-  gap: 1.5rem;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1rem;
   text-align: left;
   cursor: pointer;
-  opacity: 0.9;
+  opacity: 0.95;
+  max-width: 400px;
+  margin: 0 auto;
 }
 
 .rol:hover {
-  transform: translateY(-10px); /* Efecto de hover */
+  transform: translateY(-10px);
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
   opacity: 1;
 }
 
+/* Icono del rol */
 .rol i {
-  font-size: 2.5rem; /* Iconos más grandes */
-  color: #fff; /* Iconos blancos */
+  font-size: 2.5rem;
+  color: #fff;
   transition: color 0.3s ease;
 }
 
 .rol:hover i {
-  color: #1db0d5; /* Cambio de color de los iconos cuando se pasa el cursor */
+  color: #fff; /* Mantiene blanco el icono */
 }
 
-/* Títulos de los roles */
+/* Título del rol */
 .rol h3 {
-  color: #fff; /* Títulos en blanco */
+  color: #fff;
   font-size: 1.8rem;
   font-weight: 600;
   margin-bottom: 1rem;
@@ -239,39 +245,29 @@ header:hover {
   letter-spacing: 1px;
 }
 
-/* Estilo para las descripciones de los roles */
+/* Descripción del rol: oculta por defecto */
 .rol p {
-  color: #ccc; /* Descripción en gris claro */
+  color: #ccc;
   font-size: 1.1rem;
-  line-height: 1.7; /* Aumenta el espacio entre líneas */
+  line-height: 1.7;
+  margin-top: 0;
+  padding: 0 1rem;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease, margin 0.3s ease, padding 0.3s ease;
+}
+
+/* Al hacer click (casilla activa), se muestra la descripción */
+.rol.active p {
+  max-height: 500px; /* Valor suficiente para el contenido */
   margin-top: 1rem;
-  text-align: justify;
-  transition: color 0.3s ease; /* Efecto de transición para el texto */
-}
-
-.rol p:hover {
-  color: #1db0d5; /* Color dinámico para las descripciones al pasar el cursor */
-  font-weight: 500; /* Negrita cuando se pasa el cursor */
-}
-
-/* Añadir una caja con borde y sombra para hacer la descripción más destacada */
-.rol p {
   padding: 1rem;
-  background-color: #333; /* Fondo oscuro para las descripciones */
-  border-radius: 5px;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
-  margin-top: 1.5rem;
-  transition: background-color 0.3s ease;
 }
 
-.rol p:hover {
-  background-color: #000000; /* Fondo más claro cuando se pasa el cursor */
-}
-
-/* Estilo responsivo */
+/* Responsividad */
 @media (max-width: 1024px) {
   .roles-list {
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: repeat(2, 1fr);
   }
 }
 

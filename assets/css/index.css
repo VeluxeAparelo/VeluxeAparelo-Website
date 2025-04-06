@@ -209,3 +209,46 @@ footer .footer-links a:hover {
     font-size: 0.9rem;
   }
 }
+
+
+
+
+/* Estilo para el botón de Discord con candado */
+.discord-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #fff; /* Fondo blanco */
+  color: #111; /* Color oscuro para el texto */
+  padding: 6px 15px; /* Ajuste del tamaño del botón (más pequeño) */
+  font-size: 0.8rem; /* Fuente aún más pequeña */
+  border-radius: 20px; /* Bordes más pequeños */
+  border: 2px solid #fff; /* Borde blanco */
+  text-decoration: none;
+  text-transform: uppercase;
+  transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease; /* Transición */
+}
+
+.discord-btn:hover {
+  background-color: transparent;
+  color: #fff;
+  border-color: #fff; /* Cambia a blanco al pasar el mouse */
+  transform: scale(1.05); /* Aumenta ligeramente el tamaño */
+}
+
+/* Icono de candado */
+.lock-icon {
+  margin-left: 6px;
+  font-size: 1rem; /* Tamaño del icono más pequeño */
+  opacity: 0.5; /* Semitransparente */
+}
+
+/* Estilo del botón bloqueado */
+.discord-btn.locked {
+  background-color: #444; /* Fondo más oscuro cuando está bloqueado */
+  cursor: not-allowed; /* Deshabilita la interacción */
+}
+
+.discord-btn.locked .lock-icon {
+  opacity: 1; /* El candado se vuelve completamente visible */
+}

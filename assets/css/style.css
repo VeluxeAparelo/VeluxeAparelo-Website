@@ -1,347 +1,211 @@
-/* Reset básico */
+/* Reset basic styles */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
+/* Global Styles */
 body {
-  font-family: 'Segoe UI', sans-serif;
-  background-color: #000;
-  color: #fff;
+  font-family: 'Arial', sans-serif;
   line-height: 1.6;
+  color: #fff;
+  background-color: #111;
 }
 
-.container {
-  width: 90%;
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Header */
+header {
+  background-color: #111;
+  padding: 20px 0;
+  border-bottom: 2px solid #444;
+}
+
+header .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   max-width: 1200px;
   margin: 0 auto;
+  padding: 0 20px;
 }
 
-header {
-  background: #111;
-  padding: 1rem 0;
-  border-bottom: 1px solid #333;
-}
-
-.logo {
+header .logo a {
   font-size: 1.8rem;
   font-weight: bold;
   color: #fff;
+  letter-spacing: 1px;
+  transition: color 0.3s ease;
 }
 
-.nav-links {
+header .logo a:hover {
+  color: #fff;
+}
+
+nav .nav-links {
   list-style: none;
   display: flex;
-  gap: 1.5rem;
-  margin-top: 0.5rem;
+  gap: 20px;
 }
 
-.nav-links a {
+nav .nav-links li {
+  font-size: 1rem;
+}
+
+nav .nav-links a {
   color: #fff;
-  text-decoration: none;
-  transition: color 0.3s;
+  transition: color 0.3s ease;
 }
 
-.nav-links a:hover,
-.nav-links .active {
-  color: #ccc;
+nav .nav-links a:hover,
+nav .nav-links a.active {
+  color: #fff;
 }
 
-.section.hero {
-  text-align: center;
-  padding: 6rem 1rem;
-  background: linear-gradient(to bottom, #000, #111);
-}
-
-.section.hero .btn {
-  display: inline-block;
-  margin-top: 2rem;
-  padding: 0.8rem 2rem;
-  background: #fff;
-  color: #000;
-  text-decoration: none;
-  font-weight: bold;
-  border-radius: 5px;
-  transition: background 0.3s;
-}
-
-.section.hero .btn:hover {
-  background: #ccc;
-}
-
-footer {
-  background: #111;
-  text-align: center;
-  padding: 1rem 0;
-  border-top: 1px solid #333;
-  font-size: 0.9rem;
-}
-
-
-.section.about {
-  padding: 5rem 1rem;
-  background-color: #000;
+/* Hero Section */
+.hero {
+  background: url('https://via.placeholder.com/1200x500') no-repeat center center/cover;
+  padding: 80px 0;
   text-align: center;
 }
 
-.section.about h2 {
-  font-size: 2.5rem;
-  margin-bottom: 2rem;
-  color: #fff;
-}
-
-.section.about p {
-  max-width: 800px;
-  margin: 0 auto 2rem;
-  color: #ccc;
-}
-
-.valores {
-  display: flex;
-  flex-direction: column;
-  gap: 2rem;
-  margin-top: 3rem;
-}
-
-.valor {
-  background: #111;
-  padding: 2rem;
-  border-radius: 10px;
-  border: 1px solid #222;
-}
-
-.valor h3 {
-  color: #fff;
-  margin-bottom: 0.5rem;
-}
-
-.valor p {
-  color: #bbb;
-}
-
-@media (min-width: 768px) {
-  .valores {
-    flex-direction: row;
-    justify-content: space-between;
-  }
-
-  .valor {
-    width: 30%;
-  }
-}
-
-
-.section.services {
-  padding: 5rem 1rem;
-  background-color: #111;
-  text-align: center;
-}
-
-.section.services h2 {
-  font-size: 2.5rem;
-  margin-bottom: 1.5rem;
-  color: #fff;
-}
-
-.section.services p {
-  max-width: 800px;
-  margin: 0 auto 3rem;
-  color: #ccc;
-}
-
-.servicios-lista {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 2rem;
-}
-
-.servicio {
-  background: #222;
-  padding: 2rem;
-  border-radius: 10px;
-  border: 1px solid #333;
-}
-
-.servicio h3 {
-  color: #fff;
-  margin-bottom: 0.5rem;
-}
-
-.servicio p {
-  color: #bbb;
-}
-
-@media (min-width: 768px) {
-  .servicios-lista {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-
-@media (min-width: 1024px) {
-  .servicios-lista {
-    grid-template-columns: repeat(4, 1fr);
-  }
-}
-
-
-.section.faq {
-  padding: 5rem 1rem;
-  background-color: #111;
-  text-align: center;
-}
-
-.section.faq h2 {
-  font-size: 2.5rem;
-  margin-bottom: 1.5rem;
-  color: #fff;
-}
-
-.section.faq p {
-  max-width: 800px;
-  margin: 0 auto 3rem;
-  color: #ccc;
-}
-
-.faq-list {
-  display: flex;
-  flex-direction: column;
-  gap: 2rem;
-  align-items: flex-start;
-}
-
-.faq-item {
-  background: #222;
-  padding: 2rem;
-  border-radius: 10px;
-  border: 1px solid #333;
-  width: 100%;
-}
-
-.faq-item h3 {
-  color: #fff;
-  margin-bottom: 1rem;
-}
-
-.faq-item p {
-  color: #bbb;
-}
-
-@media (min-width: 768px) {
-  .faq-list {
-    gap: 1.5rem;
-    align-items: center;
-  }
-}
-
-.section.contacto {
-  padding: 5rem 1rem;
-  background-color: #111;
-  text-align: center;
-}
-
-.section.contacto h2 {
-  font-size: 2.5rem;
-  margin-bottom: 1.5rem;
-  color: #fff;
-}
-
-.section.contacto p {
-  max-width: 800px;
-  margin: 0 auto 3rem;
-  color: #ccc;
-}
-
-.contact-links {
-  display: flex;
-  flex-direction: column;
-  gap: 3rem;
-  margin-bottom: 3rem;
-}
-
-.contact-method h3 {
-  font-size: 1.75rem;
-  color: #fff;
-  margin-bottom: 1rem;
-}
-
-.contact-method ul {
-  list-style-type: none;
-  padding: 0;
-}
-
-.contact-method li {
-  margin-bottom: 1rem;
-}
-
-.contact-method a {
-  color: #fff;
-  text-decoration: none;
-  font-size: 1.2rem;
-}
-
-.contact-method a:hover {
-  color: #1db0d5;
-}
-
-.email {
-  color: #fff;
-  font-size: 1.5rem;
-  text-decoration: none;
-}
-
-.email:hover {
-  color: #1db0d5;
-}
-
-.formulario {
-  background: #222;
-  padding: 2rem;
-  border-radius: 10px;
-  border: 1px solid #333;
+.hero .content {
   max-width: 600px;
   margin: 0 auto;
 }
 
-.formulario h3 {
+.hero h2 {
+  font-size: 2.5rem;
   color: #fff;
-  margin-bottom: 1.5rem;
+  margin-bottom: 20px;
 }
 
-.formulario label {
-  color: #ccc;
-  display: block;
-  margin-bottom: 0.5rem;
-}
-
-.formulario input,
-.formulario textarea {
-  width: 100%;
-  padding: 1rem;
-  margin-bottom: 1.5rem;
-  border: 1px solid #333;
-  background-color: #222;
-  color: #fff;
-  border-radius: 5px;
-}
-
-.formulario input:focus,
-.formulario textarea:focus {
-  outline: none;
-  border-color: #1db0d5;
-}
-
-.formulario button {
-  padding: 1rem 2rem;
-  border: none;
-  background-color: #1db0d5;
-  color: #fff;
+.hero p {
   font-size: 1.2rem;
-  cursor: pointer;
-  border-radius: 5px;
-  transition: background-color 0.3s ease;
+  color: #fff;
+  margin-bottom: 20px;
 }
 
-.formulario button:hover {
-  background-color: #167a8c;
+.hero .btn {
+  background-color: #fff;
+  color: #111;
+  padding: 12px 30px;
+  font-size: 1rem;
+  border-radius: 30px;
+  transition: background-color 0.3s ease;
+  border: 2px solid #fff;
+}
+
+.hero .btn:hover {
+  background-color: transparent;
+  color: #fff;
+  border-color: #fff;
+}
+
+/* Services Preview Section */
+#services-preview {
+  padding: 60px 20px;
+  background-color: #111;
+}
+
+#services-preview .container {
+  text-align: center;
+}
+
+#services-preview h2 {
+  font-size: 2rem;
+  color: #fff;
+  margin-bottom: 20px;
+}
+
+#services-preview .service-cards {
+  display: flex;
+  gap: 30px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+#services-preview .service-card {
+  background-color: #222;
+  padding: 20px;
+  border-radius: 8px;
+  width: 250px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  margin-bottom: 20px;
+}
+
+#services-preview .service-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 15px rgba(255, 255, 255, 0.2);
+}
+
+#services-preview .service-card h3 {
+  font-size: 1.5rem;
+  color: #fff;
+  margin-bottom: 10px;
+}
+
+#services-preview .service-card p {
+  color: #bbb;
+}
+
+/* Footer */
+footer {
+  background-color: #111;
+  padding: 20px 0;
+  text-align: center;
+}
+
+footer p {
+  color: #bbb;
+  font-size: 0.9rem;
+}
+
+footer .footer-links {
+  margin-top: 10px;
+}
+
+footer .footer-links a {
+  color: #fff;
+  margin: 0 10px;
+  font-size: 1rem;
+  transition: color 0.3s ease;
+}
+
+footer .footer-links a:hover {
+  color: #bbb;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  header .container {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  nav .nav-links {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  #services-preview .service-cards {
+    flex-direction: column;
+  }
+
+  .hero h2 {
+    font-size: 2rem;
+  }
+
+  .hero p {
+    font-size: 1rem;
+  }
+
+  .hero .btn {
+    padding: 10px 25px;
+    font-size: 0.9rem;
+  }
 }

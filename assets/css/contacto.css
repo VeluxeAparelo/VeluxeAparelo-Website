@@ -23,6 +23,8 @@ header {
   background-color: #111;
   padding: 20px 0;
   border-bottom: 2px solid #444;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
 }
 
 header .container {
@@ -34,18 +36,38 @@ header .container {
   padding: 0 20px;
 }
 
+/* Logo */
 header .logo a {
-  font-size: 1.8rem;
+  font-size: 2rem;
   font-weight: bold;
   color: #fff;
   letter-spacing: 1px;
-  transition: color 0.3s ease;
+  position: relative;
+  transition: color 0.3s ease, text-shadow 0.3s ease;
+}
+
+header .logo a::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, rgba(255, 255, 255, 0.5), rgba(0, 0, 0, 0.5));
+  z-index: -1;
+  transition: opacity 0.3s ease;
 }
 
 header .logo a:hover {
   color: #fff;
+  text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #fff, 0 0 50px #fff;
 }
 
+header .logo a:hover::before {
+  opacity: 0;
+}
+
+/* Navigation Links */
 nav .nav-links {
   list-style: none;
   display: flex;
@@ -58,13 +80,66 @@ nav .nav-links li {
 
 nav .nav-links a {
   color: #fff;
-  transition: color 0.3s ease;
+  position: relative;
+  font-weight: bold;
+  padding: 5px;
+  transition: color 0.3s ease, transform 0.3s ease, text-shadow 0.3s ease;
 }
 
-nav .nav-links a:hover,
-nav .nav-links a.active {
-  color: #fff;
+nav .nav-links a::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -4px;
+  width: 0;
+  height: 2px;
+  background-color: #fff;
+  transition: width 0.3s ease;
 }
+
+/* Hover effects for links */
+nav .nav-links a:hover {
+  color: #fff;
+  text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #fff, 0 0 50px #fff;
+  transform: translateY(-2px);
+}
+
+nav .nav-links a:hover::after,
+nav .nav-links a.active::after {
+  width: 100%;
+}
+
+/* Hover animation for the links */
+nav .nav-links a:hover {
+  padding: 10px 15px;
+  border-radius: 5px;
+  background-color: transparent;
+  transition: padding 0.3s ease, transform 0.3s ease;
+}
+
+nav .nav-links a:active {
+  transform: translateY(2px);
+}
+
+/* Add glow effect on hover for the whole header */
+header:hover {
+  background-color: #222;
+  box-shadow: 0 4px 20px rgba(255, 255, 255, 0.2);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 /* Contact Section */
 .section.contacto {

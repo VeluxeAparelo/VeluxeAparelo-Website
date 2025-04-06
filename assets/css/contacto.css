@@ -140,58 +140,40 @@ header:hover {
 
 
 
-
-/* Contact Section */
 .section.contacto {
-  padding: 5rem 2rem;
+  padding: 5rem 1rem;
   background-color: #111;
   text-align: center;
-  border-top: 2px solid #444;
 }
 
 .section.contacto h2 {
   font-size: 2.5rem;
   margin-bottom: 1.5rem;
   color: #fff;
-  font-weight: bold;
 }
 
 .section.contacto p {
   max-width: 800px;
   margin: 0 auto 3rem;
   color: #ccc;
-  font-size: 1.1rem;
 }
 
-.contact-links {
+.contact-methods {
   display: flex;
   flex-direction: column;
-  gap: 3rem;
+  gap: 2rem;
   margin-bottom: 3rem;
-}
-
-.contact-method {
-  background: #222;
-  padding: 2rem;
-  border-radius: 10px;
-  border: 1px solid #333;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.contact-method:hover {
-  transform: translateY(-10px);
-  box-shadow: 0 8px 15px rgba(255, 255, 255, 0.2);
+  align-items: center;
 }
 
 .contact-method h3 {
   font-size: 1.75rem;
   color: #fff;
   margin-bottom: 1rem;
-  font-weight: bold;
 }
 
 .contact-method ul {
-  list-style-type: none;
+  list-style: none;
   padding: 0;
 }
 
@@ -203,82 +185,92 @@ header:hover {
   color: #fff;
   text-decoration: none;
   font-size: 1.2rem;
-  transition: color 0.3s ease;
-}
-
-.contact-method a:hover {
-  color: #1db0d5;
+  display: block;
 }
 
 .email {
   color: #fff;
   font-size: 1.5rem;
   text-decoration: none;
+  margin-top: 1rem;
 }
 
 .email:hover {
   color: #1db0d5;
 }
 
-/* Formulario */
-.formulario {
-  background: #222;
-  padding: 2rem;
+/* Tarjetas de redes sociales */
+.social-links {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.social-card {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem 2rem;
+  background-color: #222;
   border-radius: 10px;
-  border: 1px solid #333;
-  max-width: 600px;
-  margin: 0 auto;
+  width: 200px;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.formulario:hover {
+.social-card i {
+  font-size: 1.8rem;
+  margin-right: 10px;
+}
+
+.social-card:hover {
   transform: translateY(-5px);
-  box-shadow: 0 8px 15px rgba(255, 255, 255, 0.2);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
 }
 
-.formulario h3 {
+.social-card.instagram {
+  background-color: #e4405f;
+}
+
+.social-card.tiktok {
+  background-color: #010101;
+}
+
+.social-card.x {
+  background-color: #1d9bf0;
+}
+
+/* Colores al pasar el mouse */
+.social-card:hover {
+  background-color: #ff9e00;
   color: #fff;
-  margin-bottom: 1.5rem;
-  font-weight: bold;
 }
 
-.formulario label {
-  color: #ccc;
-  display: block;
-  margin-bottom: 0.5rem;
+.social-card.instagram:hover {
+  background-color: #e4405f;
 }
 
-.formulario input,
-.formulario textarea {
-  width: 100%;
-  padding: 1rem;
-  margin-bottom: 1.5rem;
-  border: 1px solid #333;
-  background-color: #222;
-  color: #fff;
-  border-radius: 5px;
-  font-size: 1rem;
-  transition: border-color 0.3s ease;
+.social-card.tiktok:hover {
+  background-color: #010101;
 }
 
-.formulario input:focus,
-.formulario textarea:focus {
-  outline: none;
-  border-color: #1db0d5;
+.social-card.x:hover {
+  background-color: #1d9bf0;
 }
 
-.formulario button {
-  padding: 1rem 2rem;
-  border: none;
-  background-color: #1db0d5;
-  color: #fff;
-  font-size: 1.2rem;
-  cursor: pointer;
-  border-radius: 5px;
-  transition: background-color 0.3s ease, transform 0.3s ease;
-}
+/* Estilo responsivo */
+@media (max-width: 768px) {
+  .contact-methods {
+    flex-direction: column;
+    align-items: center;
+  }
 
-.formulario button:hover {
-  background-color: #167a8c;
-  transform: translateY(-5px);
+  .social-links {
+    flex-direction: column;
+  }
+
+  .social-card {
+    width: 100%;
+    margin-bottom: 1rem;
+  }
 }

@@ -12,14 +12,16 @@
 <body>
   <header>
     <div class="container">
-      <h1 class="logo">VeluxeAparelo</h1>
+      <h1 class="logo"><a href="index.html">VeluxeAparelo</a></h1>
       <nav>
         <ul class="nav-links">
-          <li><a href="index.html">Inicio</a></li>
+          <li><a href="index.html" class="active">Inicio</a></li>
           <li><a href="sobre.html">Sobre Nosotros</a></li>
           <li><a href="servicios.html">Servicios</a></li>
           <li><a href="faq.html">FAQ</a></li>
-          <li><a href="contacto.html" class="active">Contacto</a></li>
+          <li><a href="contacto.html">Contacto</a></li>
+          <li><a href="alianzas.html">Alianzas</a></li>
+          <li><a href="#" class="disabled">Organizaciones [Próximamente]</a></li>
         </ul>
       </nav>
     </div>
@@ -31,14 +33,24 @@
         <h2>Contacto</h2>
         <p>¿Tienes alguna pregunta o quieres colaborar con nosotros? ¡No dudes en contactarnos!</p>
 
-        <div class="contact-links">
+        <div class="contact-methods">
           <div class="contact-method">
             <h3>Redes Sociales</h3>
             <p>Síguenos en nuestras redes sociales para más actualizaciones y noticias:</p>
-            <ul>
-              <li><a href="https://www.instagram.com/veluxeaparelo/" target="_blank">Instagram</a></li>
-              <li><a href="https://www.tiktok.com/@veluxeaparelo" target="_blank">TikTok</a></li>
-            </ul>
+            <div class="social-links">
+              <a href="https://www.instagram.com/veluxeaparelo/" target="_blank" class="social-card instagram">
+                <i class="fab fa-instagram"></i>
+                Instagram
+              </a>
+              <a href="https://www.tiktok.com/@veluxeaparelo" target="_blank" class="social-card tiktok">
+                <i class="fab fa-tiktok"></i>
+                TikTok
+              </a>
+              <a href="https://x.com/VeluxeAparelo" target="_blank" class="social-card x">
+                <i class="fab fa-x"></i>
+                X (anteriormente Twitter)
+              </a>
+            </div>
           </div>
 
           <div class="contact-method">

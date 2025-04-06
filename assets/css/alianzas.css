@@ -179,8 +179,6 @@ footer p {
 
 
 
-
-
 /* Alianzas Section */
 .section.alianzas {
   padding: 5rem 1rem;
@@ -205,16 +203,14 @@ footer p {
 /* Lista de Alianzas */
 .alianzas-lista {
   display: grid;
-  grid-template-columns: 1fr;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 2rem;
-  flex-direction: row;
   padding: 0 1rem;
 }
 
 .alianza-item {
   background: #222;
   padding: 2rem;
-  flex-direction: row;
   border-radius: 10px;
   border: 1px solid #333;
   text-align: center;
@@ -224,29 +220,26 @@ footer p {
 .alianza-item:hover {
   transform: translateY(-10px);
   box-shadow: 0 8px 15px rgba(255, 255, 255, 0.1);
-  flex-direction: row;
 }
 
 .alianza-item img {
   width: 150px;
   height: 150px;
   object-fit: cover;
-  flex-direction: row;
   border-radius: 50%;
   margin-bottom: 1rem;
+  max-width: 100%;
 }
 
 .alianza-item h3 {
   color: #fff;
   margin-bottom: 1rem;
-  flex-direction: row;
   font-size: 1.8rem;
 }
 
 .alianza-item p {
   color: #bbb;
   font-size: 1.1rem;
-  flex-direction: row;
   line-height: 1.6;
 }
 
@@ -256,7 +249,7 @@ footer p {
   justify-content: center;
   gap: 1rem;
   margin-top: 1rem;
-  flex-direction: row;
+  flex-wrap: wrap;
 }
 
 .alianza-link {
@@ -269,28 +262,13 @@ footer p {
   display: flex;
   align-items: center;
   gap: 0.5rem;
-  flex-direction: row;
 }
 
 .alianza-link:hover {
   background-color: #d9d5d5;
+  color: #111;
 }
 
 .alianza-link i {
   font-size: 1.2rem;
-}
-
-/* Responsive Styles */
-@media (min-width: 768px) {
-  .alianzas-lista {
-    grid-template-columns: repeat(2, 1fr);
-    flex-direction: row;
-  }
-}
-
-@media (min-width: 1024px) {
-  .alianzas-lista {
-    grid-template-columns: repeat(3, 1fr);
-    flex-direction: row;
-  }
 }

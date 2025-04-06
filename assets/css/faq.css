@@ -131,7 +131,7 @@ header:hover {
 
 
 
-
+/* Sección FAQ */
 .section.faq {
   padding: 5rem 1rem;
   background-color: #111;
@@ -142,41 +142,114 @@ header:hover {
   font-size: 2.5rem;
   margin-bottom: 1.5rem;
   color: #fff;
+  font-weight: bold;
 }
 
 .section.faq p {
   max-width: 800px;
   margin: 0 auto 3rem;
   color: #ccc;
+  font-size: 1.1rem;
+  line-height: 1.7;
 }
 
+/* Lista de preguntas frecuentes */
 .faq-list {
   display: flex;
   flex-direction: column;
   gap: 2rem;
-  align-items: flex-start;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
+/* Ítem de FAQ */
 .faq-item {
   background: #222;
   padding: 2rem;
   border-radius: 10px;
   border: 1px solid #333;
   width: 100%;
+  cursor: pointer;
+  overflow: hidden;
+  transition: background 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+  position: relative;
 }
 
-.faq-item h3 {
+/* Efecto hover para ítem */
+.faq-item:hover {
+  background: #333;
+  transform: translateY(-5px);
+  box-shadow: 0 8px 15px rgba(255, 255, 255, 0.1);
+}
+
+/* Encabezado del FAQ (título y toggle) */
+.faq-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.faq-header h3 {
   color: #fff;
-  margin-bottom: 1rem;
+  font-size: 1.8rem;
+  font-weight: bold;
+  margin: 0;
 }
 
+.faq-toggle {
+  font-size: 1.5rem;
+  transition: transform 0.3s ease;
+}
+
+/* Contenido de la respuesta */
 .faq-item p {
   color: #bbb;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.5s ease, padding 0.3s ease;
+  margin: 0;
+  padding-top: 0;
+  padding-bottom: 0;
 }
 
+/* Ítem activo: expandir respuesta */
+.faq-item.active p {
+  max-height: 1000px;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+
+/* Rotación del toggle cuando el ítem está activo */
+.faq-item.active .faq-toggle {
+  transform: rotate(180deg);
+}
+
+/* Responsive */
 @media (min-width: 768px) {
   .faq-list {
     gap: 1.5rem;
-    align-items: center;
+  }
+
+  .faq-item {
+    width: 80%;
   }
 }
+
+@media (min-width: 1024px) {
+  .faq-list {
+    align-items: center;
+  }
+  
+  .faq-item {
+    width: 60%;
+  }
+}
+
+@media (min-width: 1200px) {
+  .faq-item {
+    width: 50%;
+  }
+}
+
+

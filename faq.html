@@ -28,23 +28,35 @@
     <section class="section faq">
       <div class="container">
         <h2>Preguntas Frecuentes</h2>
-        <p>Responde tus dudas más comunes sobre nuestros servicios, plataforma y cómo podemos ayudarte.</p>
+        <p>Resuelve tus dudas más comunes sobre nuestros servicios, plataforma y cómo podemos ayudarte.</p>
 
         <div class="faq-list">
           <div class="faq-item">
-            <h3>¿Qué es VeluxeAparelo?</h3>
+            <div class="faq-header">
+              <h3>¿Qué es VeluxeAparelo?</h3>
+              <span class="faq-toggle">&#9660;</span>
+            </div>
             <p>VeluxeAparelo es una plataforma que ofrece soluciones para la gestión y administración de comunidades en línea, enfocada en la seguridad, automatización y organización.</p>
           </div>
           <div class="faq-item">
-            <h3>¿Cómo puedo comenzar a usar VeluxeAparelo?</h3>
-            <p>Solo necesitas crear una cuenta en nuestra página y explorar los servicios disponibles. Puedes comenzar con nuestros tutoriales y recursos para empezar.</p>
+            <div class="faq-header">
+              <h3>¿Cómo puedo comenzar a usar VeluxeAparelo?</h3>
+              <span class="faq-toggle">&#9660;</span>
+            </div>
+            <p>No es necesario crear cuentas en nuestro sitio. Simplemente explora nuestros recursos y servicios para aprovechar todo lo que ofrecemos.</p>
           </div>
           <div class="faq-item">
-            <h3>¿Ofrecen soporte técnico?</h3>
+            <div class="faq-header">
+              <h3>¿Ofrecen soporte técnico?</h3>
+              <span class="faq-toggle">&#9660;</span>
+            </div>
             <p>Sí, ofrecemos soporte técnico dedicado para ayudarte a resolver cualquier inconveniente. Puedes contactarnos a través de nuestra página de contacto.</p>
           </div>
           <div class="faq-item">
-            <h3>¿Qué servicios ofrecen?</h3>
+            <div class="faq-header">
+              <h3>¿Qué servicios ofrecen?</h3>
+              <span class="faq-toggle">&#9660;</span>
+            </div>
             <p>VeluxeAparelo ofrece servicios de gestión de usuarios, seguridad avanzada, automatización de tareas y soporte técnico. Puedes ver más detalles en nuestra página de servicios.</p>
           </div>
         </div>
@@ -59,5 +71,26 @@
   </footer>
 
   <script src="assets/js/script.js"></script>
+  <script>
+    // Script para expandir/contraer las respuestas de FAQ con animación
+    document.querySelectorAll('.faq-header').forEach(header => {
+      header.addEventListener('click', () => {
+        const faqItem = header.parentElement;
+        const paragraph = faqItem.querySelector('p');
+        const icon = header.querySelector('.faq-toggle');
+        
+        // Alternar la clase 'active'
+        faqItem.classList.toggle('active');
+        
+        if (faqItem.classList.contains('active')) {
+          paragraph.style.maxHeight = paragraph.scrollHeight + 'px';
+          icon.innerHTML = '&#9650;'; // Flecha hacia arriba
+        } else {
+          paragraph.style.maxHeight = '0';
+          icon.innerHTML = '&#9660;'; // Flecha hacia abajo
+        }
+      });
+    });
+  </script>
 </body>
 </html>

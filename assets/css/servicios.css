@@ -245,6 +245,13 @@ footer p {
   line-height: 1.6;
 }
 
+
+
+
+
+
+
+
 /* Capa deshabilitada con fondo gris */
 .disabled-overlay {
   position: absolute;
@@ -287,6 +294,26 @@ footer p {
   opacity: 0.5;
   pointer-events: none; /* Deshabilitar interacciones */
 }
+
+
+/* Mostrar el overlay solo en el servicio de Minecraft */
+.servicio.mc-disabled .disabled-overlay {
+  visibility: visible;
+  opacity: 1;
+}
+
+/* Aplicar un estilo de opacidad reducida al servicio de Minecraft */
+.servicio.mc-disabled {
+  opacity: 0.5;
+  pointer-events: none; /* Deshabilitar interacciones */
+}
+
+
+
+
+
+
+
 
 /* Responsive Styles */
 @media (min-width: 768px) {

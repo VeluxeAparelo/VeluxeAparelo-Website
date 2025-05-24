@@ -1,4 +1,4 @@
-/* Reset basic styles */
+/* Reset básico */
 * {
   margin: 0;
   padding: 0;
@@ -16,6 +16,8 @@ body {
 a {
   text-decoration: none;
   color: inherit;
+  cursor: pointer;
+  transition: color 0.3s ease;
 }
 
 /* Header */

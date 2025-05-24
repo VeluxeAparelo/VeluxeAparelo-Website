@@ -28,12 +28,13 @@ header {
 }
 
 header .container {
-  display: flex;
+display: flex;
   justify-content: space-between;
   align-items: center;
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 20px;
+  flex-wrap: wrap;
 }
 
 /* Logo */
@@ -178,7 +179,6 @@ footer p {
 
 
 
-
 /* Sección Equipo - Roles */
 .section.equipo {
   padding: 5rem 1rem;
@@ -211,30 +211,43 @@ footer p {
   margin-top: 3rem;
 }
 
-/* Cada rol */
 .rol {
-  background-color: #222; /* Fondo oscuro */
-  padding: 2.5rem;
-  border-radius: 8px;
-  border: 1px solid #333;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
-  transition: transform 0.3s ease, box-shadow 0.3s ease, opacity 0.3s ease;
+  background: rgba(255, 255, 255, 0.12); /* Fondo blanco translúcido */
+  backdrop-filter: blur(12px) saturate(150%);
+  -webkit-backdrop-filter: blur(12px) saturate(150%);
+  border-radius: 16px;
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  box-shadow: 
+    0 8px 24px rgba(0, 0, 0, 0.2),
+    inset 0 0 0 1px rgba(255, 255, 255, 0.1);
+  padding: 2.5rem 3rem;
+  cursor: pointer;
+  transition: 
+    transform 0.3s ease, 
+    box-shadow 0.3s ease, 
+    opacity 0.3s ease, 
+    background 0.3s ease;
+  color: #fff;
+  max-width: 400px;
+  margin: 0 auto;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   gap: 1rem;
-  text-align: left;
-  cursor: pointer;
   opacity: 0.95;
-  max-width: 400px;
-  margin: 0 auto;
+  user-select: none;
 }
 
 .rol:hover {
-  transform: translateY(-10px);
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
+  transform: translateY(-12px);
+  box-shadow:
+    0 16px 40px rgba(0, 0, 0, 0.35),
+    inset 0 0 0 1px rgba(255, 255, 255, 0.15);
   opacity: 1;
+  background: rgba(255, 255, 255, 0.18);
 }
+
+
 
 /* Icono del rol */
 .rol i {
@@ -268,6 +281,15 @@ footer p {
   overflow: hidden;
   transition: max-height 0.3s ease, margin 0.3s ease, padding 0.3s ease;
 }
+
+/* Al hacer click (casilla activa), se muestra la descripción */
+.rol.active p {
+  max-height: 500px; /* Valor suficiente para el contenido */
+  margin-top: 1rem;
+  padding: 1rem;
+}
+
+
 
 /* Al hacer click (casilla activa), se muestra la descripción */
 .rol.active p {

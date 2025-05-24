@@ -35,26 +35,36 @@
     <p>Equipo de Gobernación de VeluxeAparelo</p>
 
     <div class="roles-list">
-      <!-- Junta Directiva Externa -->
-      <div class="rol">
-        <i class="fas fa-chalkboard-teacher"></i>
-        <h3>Junta Directiva Externa</h3>
-        <p>Esta es la máxima autoridad en la organización, encargada de supervisar y guiar las decisiones estratégicas.</p>
-      </div>
+     <div class="roles-list">
+  <!-- Junta Directiva Externa -->
+  <div class="rol">
+    <i class="fas fa-chalkboard-teacher"></i>
+    <h3>Junta Directiva Externa</h3>
+    <p>Esta es la máxima autoridad en la organización, encargada de supervisar y guiar las decisiones estratégicas.</p>
+  </div>
 
-      <!-- Junta Directiva Interna -->
-      <div class="rol">
-        <i class="fas fa-users-cog"></i>
-        <h3>Junta Directiva Interna</h3>
-        <p>Encargada de la administración interna y de las decisiones operativas diarias dentro de VeluxeAparelo.</p>
-      </div>
+  <!-- Junta Directiva Interna -->
+  <div class="rol">
+    <i class="fas fa-users-cog"></i>
+    <h3>Junta Directiva Interna</h3>
+    <p>Encargada de la administración interna y de las decisiones operativas diarias dentro de VeluxeAparelo.</p>
+  </div>
 
-      <!-- CEO -->
-      <div class="rol">
-        <i class="fas fa-user-tie"></i>
-        <h3>CEO</h3>
-        <p>Responsable general de la visión, misión y desarrollo global de VeluxeAparelo.</p>
-      </div>
+  <!-- CEO -->
+  <div class="rol">
+    <i class="fas fa-user-tie"></i>
+    <h3>CEO</h3>
+    <p>Responsable general de la visión, misión y desarrollo global de VeluxeAparelo.</p>
+  </div>
+
+  <!-- COO -->
+  <div class="rol">
+    <i class="fas fa-user-shield"></i>
+    <h3>COO</h3>
+    <p>Encargado de supervisar las operaciones diarias y coordinar los distintos departamentos para el cumplimiento eficiente de los objetivos.</p>
+  </div>
+</div>
+
     </div>
   </div>
 </section>
@@ -67,6 +77,26 @@
     </div>
   </footer>
 
-  <script src="assets/js/script.js"></script>
+ <script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const roles = document.querySelectorAll('.rol');
+
+    roles.forEach(rol => {
+      rol.addEventListener('click', () => {
+        const isActive = rol.classList.contains('active');
+
+        // Cierra todos los roles
+        roles.forEach(r => r.classList.remove('active'));
+
+        // Si el que clickeaste no estaba activo, lo abre
+        if (!isActive) {
+          rol.classList.add('active');
+        }
+      });
+    });
+  });
+</script>
+
+
 </body>
 </html>

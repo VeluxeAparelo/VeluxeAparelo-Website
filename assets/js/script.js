@@ -11,3 +11,4 @@ document.querySelectorAll('.rol').forEach(rol => {
     rol.classList.toggle('active');
   });
 });
+

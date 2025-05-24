@@ -61,7 +61,7 @@
   <div class="rol">
     <i class="fas fa-user-shield"></i>
     <h3>COO</h3>
-    <p>Encargado de supervisar las operaciones diarias y coordinar los distintos departamentos para el cumplimiento eficiente de los objetivos.</p>
+    <p>Encargado de supervisar las operaciones diarias y coordinar los distintos departamentos para el cumplimiento eficiente de los objetivos. [Director de Operaciones]</p>
   </div>
 </div>
 
@@ -77,25 +77,9 @@
     </div>
   </footer>
 
- <script>
-  document.addEventListener('DOMContentLoaded', () => {
-    const roles = document.querySelectorAll('.rol');
+<script src="assets/js/script.js"></script>
 
-    roles.forEach(rol => {
-      rol.addEventListener('click', () => {
-        const isActive = rol.classList.contains('active');
 
-        // Cierra todos los roles
-        roles.forEach(r => r.classList.remove('active'));
-
-        // Si el que clickeaste no estaba activo, lo abre
-        if (!isActive) {
-          rol.classList.add('active');
-        }
-      });
-    });
-  });
-</script>
 
 
 </body>

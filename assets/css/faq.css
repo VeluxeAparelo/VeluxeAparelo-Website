@@ -258,7 +258,7 @@ footer p {
 
 /* Ítem activo: expandir respuesta */
 .faq-item.active p {
-  max-height: 2300px; /* Aumentado para permitir más expansión */
+  max-height: 23000px; /* Aumentado para permitir más expansión */
   padding-top: 1rem;
   padding-bottom: 1rem;
 }

@@ -272,3 +272,52 @@ footer p {
 .alianza-link i {
   font-size: 1.2rem;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+.disabled-alianza {
+  position: relative;
+  opacity: 0.5;
+  pointer-events: none;
+  filter: grayscale(100%);
+}
+
+.alianza-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(30, 30, 30, 0.6);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  z-index: 10;
+  text-align: center;
+  color: white;
+  font-weight: bold;
+  font-size: 1.2rem;
+  border-radius: 8px;
+}
+
+.lock-icon {
+  font-size: 2rem;
+  margin-bottom: 8px;
+}
+
+.disabled-link {
+  pointer-events: none;
+  color: lightgray !important;
+  text-decoration: none;
+}
+

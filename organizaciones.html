@@ -28,6 +28,8 @@
           <li><a href="index.html">Inicio</a></li>
           <li><a href="sobre.html">Sobre Nosotros</a></li>
           <li><a href="faq.html">FAQ</a></li>
+          <li><a href="servicios.html">Servicios</a></li>
+          <li><a href="store.html">Tienda</a></li>
           <li><a href="contacto.html">Contacto</a></li>
           <li><a href="alianzas.html">Alianzas</a></li>
           <li><a href="equipo.html">Equipo</a></li>
@@ -51,86 +53,155 @@
 <main>
   <section class="organizaciones">
     <div class="container">
+    
       <h2>Organizaciones</h2>
       <p>Conoce las principales organizaciones con las que trabajamos y colaboramos.</p>
 
-      <div class="org-lista">
-        <!-- Tarjetas de organización -->
-        
-        <div class="org-card">
-          <img src="https://i.ibb.co/FL7Qks5b/5002fab68f4c29ddcd3afd82ab5e7369.webp" alt="Logo VeluxeAparelo Support" />
-          <h3>VeluxeAparelo Support</h3>
-          <p>Descripción corta sobre esta organización y qué ofrece a la comunidad.</p>
-           <a href="https://discord.gg/EcHEGd2Mph" target="_blank" rel="noopener" class="btn-join">Unirse</a>
-        </div>
-        
-        <div class="org-card">
-          <img src="https://i.ibb.co/FL7Qks5b/5002fab68f4c29ddcd3afd82ab5e7369.webp" alt="Logo VeluxeAparelo" />
-          <h3>VeluxeAparelo</h3>
-          <p>Breve descripción de la organización dos, con foco en su impacto y colaboración.</p>
-          <a href="#" class="btn-join-disabled" tabindex="-1" aria-disabled="true">Unirse</a>
-        </div>
-        
-        <div class="org-card">
-          <img src="https://i.ibb.co/yB5h733z/Screenshot-20220901-143101-Gallery.webp" alt="Logo PANA CENTER" />
-          <h3>PANA CENTER</h3>
-          <p>Una descripción breve sobre la organización número uno, su misión y valores.</p>
-          <a href="https://discord.gg/ZTHyMBTWwH" target="_blank" rel="noopener" class="btn-join">Unirse</a>
-        </div>
 
+      <!-- Botón para añadir nueva organización -->
+       <div class="org-card add-org-card" id="add-org-btn">
+           <span class="add-icon">+</span>
+          <h3>Añadir organización</h3>
+          </div>
 
-        <div class="org-card">
-          <img src="https://i.ibb.co/PqgQP5L/rngv.webp" alt="Logo Ringvold College" />
-        <h3>Ringvold College</h3>
-          <p>Descripción corta sobre esta organización y qué ofrece a la comunidad.</p>
-          <a href="#" class="btn-join-disabled" tabindex="-1" aria-disabled="true">Unirse</a>
-        </div>
-
-        <div class="org-card">
-          <img src="https://i.ibb.co/Mk9fF4YD/Plan-NGames.webp" alt="Logo Plan N Games" />
-          <h3>Plan N Games</h3>
-          <p>Descripción corta sobre esta organización y qué ofrece a la comunidad.</p>
-          <a href="#" class="btn-join-disabled" tabindex="-1" aria-disabled="true">Unirse</a>
-        </div>
-
-       <div class="org-card disabled-card">
-           <div class="overlay">
-            <span class="lock-icon">🔒</span>
-            <span class="coming-soon">Próximamente</span>
-       </div>
-            <img src="https://i.ibb.co/kVcdLFbm/2-0-1.png" alt="Logo" />
-            <h3>River-Right-Wolf</h3>
-          <p>???.</p>
-          <a href="#" class="btn-join-disabled" tabindex="-1" aria-disabled="true">Unirse</a>
-       </div>
-
-        
-       <div class="org-card disabled-card">
-           <div class="overlay">
-            <span class="lock-icon">🔒</span>
-            <span class="coming-soon">Próximamente</span>
-       </div>
-            <img src=" " alt="Logo" />
-            <h3>TusoClub</h3>
-          <p>???.</p>
-          <a href="#" class="btn-join-disabled" tabindex="-1" aria-disabled="true">Unirse</a>
-       </div>
-        
-       <div class="org-card disabled-card">
-           <div class="overlay">
-            <span class="lock-icon">🔒</span>
-            <span class="coming-soon">Próximamente</span>
-       </div>
-            <img src=" " alt="Logo" />
-            <h3>???</h3>
-          <p>???.</p>
-          <a href="#" class="btn-join-disabled" tabindex="-1" aria-disabled="true">Unirse</a>
-       </div>
+        <!-- Aquí se insertarán dinámicamente las tarjetas desde Firestore -->
+         <h2>Organizaciones registradas</h2>
+         <div class="org-lista" id="org-lista"></div>
+         
 
       </div>
     </div>
+     <!-- Firebase modular desde CDN -->
+      
+<script type="module">
+  import { initializeApp } from "https://www.gstatic.com/firebasejs/11.8.1/firebase-app.js";
+  import { getFirestore, collection, addDoc, getDocs } from "https://www.gstatic.com/firebasejs/11.8.1/firebase-firestore.js";
+
+  // Config Firebase
+  const firebaseConfig = {
+    apiKey: "AIzaSyCV-kkU74FYsUMhDgWXhUekc_rdDS8_o4U",
+    authDomain: "veluxeaparelo-d96f0.firebaseapp.com",
+    databaseURL: "https://veluxeaparelo-d96f0-default-rtdb.europe-west1.firebasedatabase.app",
+    projectId: "veluxeaparelo-d96f0",
+    storageBucket: "veluxeaparelo-d96f0.firebasestorage.app",
+    messagingSenderId: "23135435409",
+    appId: "1:23135435409:web:63ba7191aa328f61659d30",
+    measurementId: "G-8SNYZGTSZL"
+  };
+
+  const app = initializeApp(firebaseConfig);
+  const db = getFirestore(app);
+
+  const CODIGO_VALIDACION = "VELUXE2025";
+
+  // Mostrar formulario para añadir nueva organización
+  document.getElementById("add-org-btn").addEventListener("click", () => {
+    const codigo = prompt("Introduce el código de validación:");
+
+    if (codigo === CODIGO_VALIDACION) {
+      mostrarFormulario();
+    } else {
+      alert("Código incorrecto. No tienes permiso para añadir organizaciones.");
+    }
+  });
+
+  function mostrarFormulario() {
+    const container = document.createElement("div");
+    container.innerHTML = `
+      <div class="org-form-modal" style="background:#222; padding:20px; border-radius:8px; max-width:400px; margin:2rem auto; box-shadow:0 0 15px rgba(0,0,0,0.4); color:white;">
+        <h2>Añadir Organización</h2>
+        <input type="text" id="org-nombre" placeholder="Nombre" required style="display:block;width:100%;margin-bottom:10px;padding:8px;">
+        <input type="text" id="org-descripcion" placeholder="Descripción" required style="display:block;width:100%;margin-bottom:10px;padding:8px;">
+        <input type="url" id="org-imagen" placeholder="URL de la imagen" required style="display:block;width:100%;margin-bottom:10px;padding:8px;">
+        <input type="url" id="org-enlace" placeholder="Enlace (opcional)" style="display:block;width:100%;margin-bottom:10px;padding:8px;">
+        <select id="org-estado" style="display:block;width:100%;margin-bottom:15px;padding:8px;">
+          <option value="habilitado">Habilitado</option>
+          <option value="deshabilitado">Deshabilitado</option>
+        </select>
+        <button id="org-submit" style="padding:10px 20px; margin-right:10px;">Guardar</button>
+        <button id="org-cancel" style="padding:10px 20px;">Cancelar</button>
+      </div>
+    `;
+    document.body.appendChild(container);
+
+    document.getElementById("org-submit").addEventListener("click", async () => {
+      const nombre = document.getElementById("org-nombre").value.trim();
+      const descripcion = document.getElementById("org-descripcion").value.trim();
+      const imagen = document.getElementById("org-imagen").value.trim();
+      const enlace = document.getElementById("org-enlace").value.trim();
+      const estado = document.getElementById("org-estado").value;
+
+      if (!nombre || !descripcion || !imagen || !estado) {
+        return alert("Por favor completa todos los campos obligatorios.");
+      }
+
+      try {
+        await addDoc(collection(db, "organizaciones"), {
+          nombre,
+          descripcion,
+          imagen,
+          enlace,
+          estado,
+          fecha: new Date()
+        });
+        alert("Organización añadida correctamente.");
+        location.reload();
+      } catch (e) {
+        console.error("Error al guardar:", e);
+        alert("Hubo un error al guardar.");
+      }
+    });
+
+    document.getElementById("org-cancel").addEventListener("click", () => {
+      container.remove();
+    });
+  }
+
+  // Mostrar organizaciones
+  async function mostrarOrganizaciones() {
+    const contenedor = document.getElementById("org-lista");
+    if (!contenedor) return;
+
+    const querySnapshot = await getDocs(collection(db, "organizaciones"));
+    querySnapshot.forEach(doc => {
+      const org = doc.data();
+      const card = document.createElement("div");
+      card.classList.add("org-card");
+
+      if (org.estado === "deshabilitado") {
+        card.classList.add("disabled-card");
+        card.innerHTML = `
+          <div class="overlay">
+            <div class="lock-icon">🔒</div>
+            Organización deshabilitada temporalmente
+          </div>
+        `;
+      }
+
+      const html = `
+        <img src="${org.imagen}" alt="${org.nombre}">
+        <h3>${org.enlace ? `<a href="${org.enlace}" target="_blank">${org.nombre}</a>` : org.nombre}</h3>
+        <p>${org.descripcion}</p>
+        ${
+          org.estado === "deshabilitado"
+            ? `<button class="btn-join-disabled">No disponible</button>`
+            : `<a href="${org.enlace}" target="_blank" class="btn-join">Entrar</a>`
+        }
+      `;
+      card.innerHTML += html;
+      contenedor.appendChild(card);
+    });
+  }
+
+  mostrarOrganizaciones();
+</script>
+
+
+
+    <script type="module" src="assets/js/service1.js"></script>
   </section>
 </main>
+
 
 
   <!-- Footer -->
@@ -144,7 +215,5 @@
       </div>
     </div>
   </footer>
-
-  <script src="assets/js/script.js"></script>
 </body>
 </html>

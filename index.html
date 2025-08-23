@@ -43,25 +43,50 @@
   <!-- Main Content -->
   <main>
 
-    <!-- Hero Section -->
+ 
+<!-- Hero Section -->
 <section id="hero" class="section hero">
-  <div class="">
+  <div class="content">
     <h2>Bienvenido a VeluxeAparelo</h2>
     <p>Gestión y administración de comunidades. Simple. Seguro. Poderoso.</p>
-    <a href="sobre.html" class="discord-btn">Explorar más</a>
     
-    <!-- Botón de Discord activo -->
-    <a class=" " href="https://discord.gg/EcHEGd2Mph" target="_blank" title="Únete a nuestro servidor de Discord">
-      <span class="discord-btn">Unirse al servidor</span>
-    </a>
-    
-    <!-- Botón de Patreon -->
-    <a class=" " href="https://patreon.com/VeluxeAparelo" target="_blank" title="Apóyanos en Patreon">
-      <span class="discord-btn">Apóyanos en Patreon</span>
-    </a>
-    
+    <!-- Botones -->
+    <div class="hero-buttons" style="margin-bottom: 25px;">
+      <a href="sobre.html" class="discord-btn">Explorar más</a>
+      <a href="https://discord.gg/EcHEGd2Mph" target="_blank" class="discord-btn">Unirse al servidor</a>
+      <a href="https://patreon.com/VeluxeAparelo" target="_blank" class="discord-btn">Apóyanos en Patreon</a>
+    </div>
+
+    <!-- Temporizador debajo de los botones -->
+    <div id="countdown" class="countdown-card"></div>
   </div>
 </section>
+
+<script>
+  // Fecha de inicio del curso escolar en España
+  const cursoInicio = new Date("September 10, 2025 00:00:00").getTime();
+
+  const countdownEl = document.getElementById("countdown");
+
+  const interval = setInterval(() => {
+    const now = new Date().getTime();
+    const distance = cursoInicio - now;
+
+    if (distance <= 0) {
+      clearInterval(interval);
+      countdownEl.innerHTML = "VeluxeAparelo Modo Bunker Activado";
+      return;
+    }
+
+    const dias = Math.floor(distance / (1000 * 60 * 60 * 24));
+    const horas = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    const minutos = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+    const segundos = Math.floor((distance % (1000 * 60)) / 1000);
+
+    countdownEl.innerHTML = `Inicio del curso escolar en España: ${dias}d ${horas}h ${minutos}m ${segundos}s`;
+  }, 1000);
+</script>
+
 
     
     <section data-aos="fade-up">

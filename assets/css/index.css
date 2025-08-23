@@ -422,3 +422,31 @@ footer .footer-links a:hover {
 }
 
 
+
+
+/* Tarjeta del contador */
+.countdown-card {
+  background-color: rgba(0,0,0,0.7);
+  color: #fff;
+  padding: 20px 30px;
+  border-radius: 12px;
+  display: inline-block;
+  font-size: 1.2rem;
+  font-weight: bold;
+  border: 2px solid #fff;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.5);
+  transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.countdown-card:hover {
+  transform: scale(1.05);
+  background-color: rgba(255,255,255,0.1);
+}
+
+/* Aseguramos que los botones estén centrados */
+.hero-buttons {
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+  flex-wrap: wrap;
+}

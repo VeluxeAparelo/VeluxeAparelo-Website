@@ -1,0 +1,344 @@
+/* Reset basic styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Global Styles */
+body {
+  font-family: 'Arial', sans-serif;
+  line-height: 1.6;
+  color: #fff;
+  background-color: #111;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Header */
+header {
+  background-color: #111;
+  padding: 20px 0;
+  border-bottom: 2px solid #444;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+header .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* Logo */
+header .logo a {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #fff;
+  letter-spacing: 1px;
+  position: relative;
+  transition: color 0.3s ease, text-shadow 0.3s ease;
+}
+
+header .logo a::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, rgba(255, 255, 255, 0.5), rgba(0, 0, 0, 0.5));
+  z-index: -1;
+  transition: opacity 0.3s ease;
+}
+
+header .logo a:hover {
+  color: #fff;
+  text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #fff, 0 0 50px #fff;
+}
+
+header .logo a:hover::before {
+  opacity: 0;
+}
+
+/* Navigation Links */
+nav .nav-links {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+nav .nav-links li {
+  font-size: 1rem;
+}
+
+nav .nav-links a {
+  color: #fff;
+  position: relative;
+  font-weight: bold;
+  padding: 5px;
+  transition: color 0.3s ease, transform 0.3s ease, text-shadow 0.3s ease;
+}
+
+nav .nav-links a::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -4px;
+  width: 0;
+  height: 2px;
+  background-color: #fff;
+  transition: width 0.3s ease;
+}
+
+/* Hover effects for links */
+nav .nav-links a:hover {
+  color: #fff;
+  text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #fff, 0 0 50px #fff;
+  transform: translateY(-2px);
+}
+
+nav .nav-links a:hover::after,
+nav .nav-links a.active::after {
+  width: 100%;
+}
+
+/* Hover animation for the links */
+nav .nav-links a:hover {
+  padding: 10px 15px;
+  border-radius: 5px;
+  background-color: transparent;
+  transition: padding 0.3s ease, transform 0.3s ease;
+}
+
+nav .nav-links a:active {
+  transform: translateY(2px);
+}
+
+/* Add glow effect on hover for the whole header */
+header:hover {
+  background-color: #222;
+  box-shadow: 0 4px 20px rgba(255, 255, 255, 0.2);
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  header .container {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  nav .nav-links {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  #services-preview .service-cards {
+    flex-direction: column;
+  }
+
+  .hero h2 {
+    font-size: 2rem;
+  }
+
+  .hero p {
+    font-size: 1rem;
+  }
+
+  .hero .btn {
+    padding: 10px 25px;
+    font-size: 0.9rem;
+  }
+}
+
+/* Footer */
+footer {
+  background-color: #111;
+  padding: 20px 0;
+  text-align: center;
+}
+
+footer p {
+  color: #bbb;
+  font-size: 0.9rem;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Glass Effect */
+.glass-effect {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 0 8px 32px rgba(255, 255, 255, 0.1);
+}
+
+/* Status Panel */
+#community-status {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 60px 20px;
+  background: linear-gradient(135deg, #0f0f0f, #1a1a1a);
+}
+
+.status-panel {
+  padding: 30px 40px;
+  border-radius: 20px;
+  text-align: center;
+  max-width: 700px;
+  width: 100%;
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.status-panel:hover {
+  transform: translateY(-5px) scale(1.02);
+  box-shadow: 0 12px 40px rgba(255, 255, 255, 0.15);
+}
+
+.status-panel h2 {
+  font-size: 2rem;
+  color: #fff;
+  margin-bottom: 30px;
+  text-shadow: 0 0 4px #fff;
+}
+
+/* Services */
+.services-status {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  margin-bottom: 25px;
+}
+
+.service {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 15px;
+  padding: 20px;
+  transition: transform 0.3s ease, background 0.3s ease, box-shadow 0.3s ease;
+}
+
+.service:hover {
+  transform: translateY(-5px);
+  background: rgba(255, 255, 255, 0.08);
+  box-shadow: 0 8px 20px rgba(255, 255, 255, 0.1);
+}
+
+.service-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.service-name {
+  font-weight: 600;
+  color: #fff;
+  font-size: 1.2rem;
+}
+
+.service-icon {
+  font-size: 1.6rem;
+  transition: transform 0.3s ease;
+}
+
+.service-error {
+  font-size: 0.95rem;
+  color: #ddd;
+  line-height: 1.4;
+}
+
+/* Animación de iconos */
+.service-icon[data-blink="true"] {
+  animation: blink 1.5s infinite;
+}
+
+@keyframes blink {
+  0%, 50%, 100% { opacity: 1; transform: scale(1); }
+  25%, 75% { opacity: 0.5; transform: scale(1.1); }
+}
+
+/* Botón */
+#refresh-status {
+  margin-top: 15px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .status-panel {
+    padding: 20px;
+  }
+  .service-name {
+    font-size: 1.05rem;
+  }
+  .service-icon {
+    font-size: 1.4rem;
+  }
+}
+
+#refresh-status {
+  display: inline-block;
+  padding: 12px 25px;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #fff;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 12px;
+  cursor: pointer;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+}
+
+#refresh-status:hover {
+  background: rgba(255, 255, 255, 0.1);
+  transform: translateY(-2px) scale(1.02);
+  box-shadow: 0 4px 15px rgba(255, 255, 255, 0.2);
+}
+
+#refresh-status:active {
+  transform: translateY(0) scale(0.98);
+  box-shadow: 0 2px 8px rgba(255, 255, 255, 0.1);
+}
+
+.general-warning {
+  margin-top: 15px;
+  padding: 15px 20px;
+  background: rgba(255, 0, 0, 0.1); /* fondo rojizo semitransparente */
+  border: 1px solid rgba(255, 0, 0, 0.3);
+  border-radius: 12px;
+  color: #fff;
+  font-weight: 600;
+  text-align: center;
+  text-shadow: 0 0 4px #fff;
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0%, 100% { transform: scale(1); opacity: 1; }
+  50% { transform: scale(1.02); opacity: 0.8; }
+}

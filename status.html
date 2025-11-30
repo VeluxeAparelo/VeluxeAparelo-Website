@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="icon" type="image/png" href="https://i.ibb.co/sdzSkknP/Veluxe-Aparelo.png" />
-  <meta name="description" content="Estado de VeluxeAparelo.">
+  <meta name="description" content="VeluxeAparelo System Status.">
   <title>Status | VeluxeAparelo</title>
   <link rel="stylesheet" href="assets/css/status.css" />
 </head>
@@ -14,88 +14,73 @@
       <h1 class="logo"><a href="index.html">VeluxeAparelo</a></h1>
       <nav>
         <ul class="nav-links">
-          <li><a href="index.html">Inicio</a></li>
-          <li><a href="sobre.html">Sobre Nosotros</a></li>
-          <li><a href="servicios.html">Servicios</a></li>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="sobre.html">About Us</a></li>
+          <li><a href="servicios.html">Services</a></li>
+          <li><a href="store.html">Store</a></li>
           <li><a href="faq.html">FAQ</a></li>
-          <li><a href="contacto.html">Contacto</a></li>
-          <li><a href="alianzas.html">Alianzas</a></li>
-          <li><a href="equipo.html">Equipo</a></li>
-          <li><a href="organizaciones.html">Organizaciones</a></li>
+          <li><a href="contacto.html">Contact</a></li>
+          <li><a href="alianzas.html">Partnerships</a></li>
+          <li><a href="equipo.html">Team</a></li>
         </ul>
       </nav>
     </div>
   </header>
 
-
-
-
-
 <main>
   <section id="community-status">
     <div class="status-panel glass-effect">
-      <h2>Estado de la Comunidad</h2>
+      <h2>Community Status</h2>
 
       <div class="services-status">
-        <!-- Roblox -->
         <div class="service">
           <div class="service-header">
             <span class="service-name">Roblox</span>
             <span class="service-icon" id="roblox-status">🔴</span>
           </div>
           <p class="service-error" id="roblox-error">
-            La cuenta de VeluxeAparelo fue banneada 6 meses.<br>
-            Fecha del baneo: 10 ago 2025, 3:31 p.<br>
-            Reactivación en: <span id="roblox-countdown"></span>
+            VeluxeAparelo account banned for 6 months.<br>
+            Ban date: Aug 10, 2025, 3:31 PM.<br>
+            Reactivation in: <span id="roblox-countdown"></span>
           </p>
         </div>
 
-        <!-- Discord -->
         <div class="service">
           <div class="service-header">
             <span class="service-name">Discord</span>
-            <span class="service-icon" id="discord-status">🟡</span>
+            <span class="service-icon" id="discord-status">🟢</span>
           </div>
-          <p class="service-error">
-            Se requieren Managers, Administradores o Community Managers. Falta de personal en el servidor.
+          <p class="service-error" style="color: #4ade80;">
+            All systems operational. Staff fully active.
           </p>
         </div>
 
-        <!-- Minecraft -->
         <div class="service">
           <div class="service-header">
             <span class="service-name">Minecraft</span>
-            <span class="service-icon" id="minecraft-status">🟡</span>
+            <span class="service-icon" id="minecraft-status">🟢</span>
           </div>
-          <p class="service-error">
-            Hay falta de personal y desarrolladores en el servidor de Minecraft.
+          <p class="service-error" style="color: #4ade80;">
+            Server online and operational.
           </p>
         </div>
 
-        <!-- Servidor Central -->
         <div class="service">
           <div class="service-header">
-            <span class="service-name">Servidor Central Discord</span>
-            <span class="service-icon" id="central-status">🟠</span>
+            <span class="service-name">Central Discord Server</span>
+            <span class="service-icon" id="central-status">🟢</span>
           </div>
-          <p class="service-error">
-            Falta de miembros de staff, escasez de personal y desarrolladores.
+          <p class="service-error" style="color: #4ade80;">
+            Operational.
           </p>
         </div>
       </div>
-
       
-      <!-- Aviso general de colapso -->
-         <div class="general-warning">
-             ⚠️ Atención: La gestión de VeluxeAparelo podría colapsar por falta de staff.<br>
-           Tiempo hasta Navidad: <span id="collapse-countdown"></span>
-         </div>
-
-
-      <button id="refresh-status" class="discord-btn">Actualizar Estado</button>
+      <button id="refresh-status" class="discord-btn">Refresh Status</button>
     </div>
   </section>
 </main>
 
 <script src="assets/js/status.js"></script>
-
+</body>
+</html>

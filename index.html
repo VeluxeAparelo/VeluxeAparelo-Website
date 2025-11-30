@@ -1,124 +1,74 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="VeluxeAparelo - Plataforma profesional de administración de comunidades.">
+  <meta name="description" content="VeluxeAparelo - Professional community administration platform.">
   <meta property="og:title" content="VeluxeAparelo" />
-  <meta property="og:description" content="Gestión y administración de comunidades. Simple. Seguro. Poderoso." />
+  <meta property="og:description" content="Community management and administration. Simple. Secure. Powerful." />
   <meta property="og:image" content="https://i.ibb.co/sdzSkknP/Veluxe-Aparelo.png" />
   <meta property="og:url" content="https://tusitio.com" />
   <meta property="og:type" content="website" />
   <link rel="icon" type="image/png" href="https://i.ibb.co/sdzSkknP/Veluxe-Aparelo.png" />
-  <title>Inicio | VeluxeAparelo</title>
+  <title>Home | VeluxeAparelo</title>
   <link rel="stylesheet" href="assets/css/index.css" />
   <link href="https://unpkg.com/aos@next/dist/aos.css" rel="stylesheet">
-<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
-<script>
-  AOS.init();
-</script>
-
+  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
 </head>
 <body>
-  <!-- Header -->
   <header>
     <div class="container">
       <h1 class="logo"><a href="index.html">VeluxeAparelo™</a></h1>
       <nav>
         <ul class="nav-links">
-          <li><a href="sobre.html">Sobre Nosotros</a></li>
-          <li><a href="servicios.html">Servicios</a></li>
-          <li><a href="store.html">Tienda</a></li>
+          <li><a href="sobre.html">About Us</a></li>
+          <li><a href="servicios.html">Services</a></li>
+          <li><a href="store.html">Store</a></li>
           <li><a href="faq.html">FAQ</a></li>
           <li><a href="status.html">Status</a></li>
-          <li><a href="contacto.html">Contacto</a></li>
-          <li><a href="alianzas.html">Alianzas</a></li>
-          <li><a href="equipo.html">Equipo</a></li>
-          <li><a href="organizaciones.html">Organizaciones</a></li>
+          <li><a href="contacto.html">Contact</a></li>
+          <li><a href="alianzas.html">Partnerships</a></li>
+          <li><a href="equipo.html">Team</a></li>
         </ul>
       </nav>
     </div>
   </header>
 
-
-  <!-- Main Content -->
   <main>
 
- 
-<!-- Hero Section -->
-<section id="hero" class="section hero">
-  <div class="content">
-    <h2>Bienvenido a VeluxeAparelo</h2>
-    <p>Gestión y administración de comunidades. Simple. Seguro. Poderoso.</p>
-    
-    <!-- Botones -->
-    <div class="hero-buttons" style="margin-bottom: 25px;">
-      <a href="sobre.html" class="discord-btn">Explorar más</a>
-      <a href="https://discord.gg/EcHEGd2Mph" target="_blank" class="discord-btn">Unirse al servidor</a>
-      <a href="https://patreon.com/VeluxeAparelo" target="_blank" class="discord-btn">Apóyanos en Patreon</a>
-    </div>
+    <section id="hero" class="section hero">
+      <div class="content">
+        <h2>Welcome to VeluxeAparelo</h2>
+        <p>Community management and administration. Simple. Secure. Powerful.</p>
+        
+        <div class="hero-buttons" style="margin-bottom: 25px;">
+          <a href="sobre.html" class="discord-btn">Explore more</a>
+          <a href="https://discord.gg/EcHEGd2Mph" target="_blank" class="discord-btn">Join Server</a>
+          <a href="https://patreon.com/VeluxeAparelo" target="_blank" class="discord-btn">Support us on Patreon</a>
+        </div>
+      </div>
+    </section>
 
-    <!-- Temporizador debajo de los botones -->
-    <div id="countdown" class="countdown-card"></div>
-  </div>
-</section>
-
-<script>
-  // Fecha de inicio del curso escolar en España
-  const cursoInicio = new Date("September 10, 2025 00:00:00").getTime();
-
-  const countdownEl = document.getElementById("countdown");
-
-  const interval = setInterval(() => {
-    const now = new Date().getTime();
-    const distance = cursoInicio - now;
-
-    if (distance <= 0) {
-      clearInterval(interval);
-      countdownEl.innerHTML = "VeluxeAparelo Modo Estoy Jodido";
-      return;
-    }
-
-    const dias = Math.floor(distance / (1000 * 60 * 60 * 24));
-    const horas = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-    const minutos = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-    const segundos = Math.floor((distance % (1000 * 60)) / 1000);
-
-    countdownEl.innerHTML = `Inicio del curso escolar en España: ${dias}d ${horas}h ${minutos}m ${segundos}s`;
-  }, 1000);
-</script>
-
-
-    
-    <section data-aos="fade-up">
-     ...
-     </section>
-
-
-    
-    <div class="progress-bar">
-    <div class="progress" style="width: 65%;"></div>
-    </div>
-
-    <!-- Información sobre el proyecto en desarrollo -->
     <section id="project-status" class="section project-status">
       <div class="container">
-        <h2>VeluxeAparelo - Proyecto en Desarrollo</h2>
-        <p>¡Bienvenido a VeluxeAparelo! Actualmente estamos trabajando en esta plataforma, que estará disponible a principio de este verano, al finalizar el curso escolar. ¡Mantente atento a las actualizaciones y a nuestro lanzamiento oficial!</p>
-        <a href="sobre.html" class="btn">Descubre más sobre nosotros</a>
+        <h2>VeluxeAparelo - Project Under Development</h2>
+        <p>Welcome to VeluxeAparelo! We are currently working on this platform, which will be available early this summer, at the end of the school year. Stay tuned for updates and our official launch!</p>
+        <a href="sobre.html" class="btn">Learn more about us</a>
       </div>
     </section>
 
   </main>
 
-  <!-- Footer -->
   <footer>
     <div class="container">
-      <p>&copy; 2025 VeluxeAparelo. Todos los derechos reservados.</p>
+      <p>&copy; 2025 VeluxeAparelo. All rights reserved.</p>
       <div class="footer-links">
         <a href="https://www.instagram.com/veluxeaparelo/" target="_blank">Instagram</a>
         <a href="https://www.tiktok.com/@veluxeaparelo" target="_blank">TikTok</a>
-        <a href="contacto.html">Contáctanos</a>
+        <a href="contacto.html">Contact Us</a>
       </div>
     </div>
   </footer>
@@ -126,4 +76,3 @@
   <script src="assets/js/script.js"></script>
 </body>
 </html>
-

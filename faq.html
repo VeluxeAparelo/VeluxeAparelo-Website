@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="icon" type="image/png" href="https://i.ibb.co/sdzSkknP/Veluxe-Aparelo.png" />
-  <meta name="description" content="Resuelve todas tus dudas con nuestras preguntas frecuentes sobre VeluxeAparelo.">
+  <meta name="description" content="Resolve all your doubts with our frequently asked questions about VeluxeAparelo.">
   <title>FAQ | VeluxeAparelo</title>
   <link rel="stylesheet" href="assets/css/faq.css" />
 </head>
@@ -14,15 +14,14 @@
       <h1 class="logo"><a href="index.html">VeluxeAparelo</a></h1>
       <nav>
         <ul class="nav-links">
-          <li><a href="index.html" class="active">Inicio</a></li>
-          <li><a href="sobre.html">Sobre Nosotros</a></li>
-          <li><a href="servicios.html">Servicios</a></li>
-          <li><a href="store.html">Tienda</a></li>
+          <li><a href="index.html" class="active">Home</a></li>
+          <li><a href="sobre.html">About Us</a></li>
+          <li><a href="servicios.html">Services</a></li>
+          <li><a href="store.html">Store</a></li>
           <li><a href="status.html">Status</a></li>
-          <li><a href="contacto.html">Contacto</a></li>
-          <li><a href="alianzas.html">Alianzas</a></li>
-          <li><a href="equipo.html">Equipo</a></li>
-          <li><a href="organizaciones.html">Organizaciones</a></li>
+          <li><a href="contacto.html">Contact</a></li>
+          <li><a href="alianzas.html">Partnerships</a></li>
+          <li><a href="equipo.html">Team</a></li>
         </ul>
       </nav>
     </div>
@@ -31,37 +30,37 @@
   <main>
     <section class="section faq">
       <div class="container">
-        <h2>Preguntas Frecuentes</h2>
-        <p>Resuelve tus dudas más comunes sobre nuestros servicios, plataforma y cómo podemos ayudarte.</p>
+        <h2>Frequently Asked Questions</h2>
+        <p>Find answers to the most common questions about our services, platform, and how we can help you.</p>
 
         <div class="faq-list">
           <div class="faq-item">
             <div class="faq-header">
-              <h3>¿Qué es VeluxeAparelo?</h3>
+              <h3>What is VeluxeAparelo?</h3>
               <span class="faq-toggle">&#9660;</span>
             </div>
-            <p>VeluxeAparelo es una plataforma que ofrece soluciones para la gestión y administración de comunidades en línea, enfocada en la seguridad, automatización y organización.</p>
+            <p>VeluxeAparelo is a platform offering solutions for online community management and administration, focused on security, automation, and organization.</p>
           </div>
           <div class="faq-item">
             <div class="faq-header">
-              <h3>¿Cómo puedo comenzar a usar VeluxeAparelo?</h3>
+              <h3>How can I start using VeluxeAparelo?</h3>
               <span class="faq-toggle">&#9660;</span>
             </div>
-            <p>No es necesario crear cuentas en nuestro sitio. Simplemente explora nuestros recursos y servicios para aprovechar todo lo que ofrecemos.</p>
+            <p>There is no need to create an account on our site. Simply explore our resources and services to take advantage of everything we offer.</p>
           </div>
           <div class="faq-item">
             <div class="faq-header">
-              <h3>¿Ofrecen soporte técnico?</h3>
+              <h3>Do you offer technical support?</h3>
               <span class="faq-toggle">&#9660;</span>
             </div>
-            <p>Sí, ofrecemos soporte técnico dedicado para ayudarte a resolver cualquier inconveniente. Puedes contactarnos a través de nuestra página de contacto.</p>
+            <p>Yes, we offer dedicated technical support to help you resolve any issues. You can contact us through our contact page.</p>
           </div>
           <div class="faq-item">
             <div class="faq-header">
-              <h3>¿Qué servicios ofrecen?</h3>
+              <h3>What services do you offer?</h3>
               <span class="faq-toggle">&#9660;</span>
             </div>
-            <p>VeluxeAparelo ofrece servicios de gestión de usuarios, seguridad avanzada, automatización de tareas y soporte técnico. Puedes ver más detalles en nuestra página de servicios.</p>
+            <p>VeluxeAparelo offers user management services, advanced security, task automation, and technical support. You can see more details on our services page.</p>
           </div>
         </div>
       </div>
@@ -70,28 +69,28 @@
 
   <footer>
     <div class="container">
-      <p>&copy; 2025 VeluxeAparelo. Todos los derechos reservados.</p>
+      <p>&copy; 2025 VeluxeAparelo. All rights reserved.</p>
     </div>
   </footer>
 
   <script src="assets/js/script.js"></script>
   <script>
-    // Script para expandir/contraer las respuestas de FAQ con animación
+    // Script to expand/collapse FAQ answers with animation
     document.querySelectorAll('.faq-header').forEach(header => {
       header.addEventListener('click', () => {
         const faqItem = header.parentElement;
         const paragraph = faqItem.querySelector('p');
         const icon = header.querySelector('.faq-toggle');
         
-        // Alternar la clase 'active'
+        // Toggle 'active' class
         faqItem.classList.toggle('active');
         
         if (faqItem.classList.contains('active')) {
           paragraph.style.maxHeight = paragraph.scrollHeight + 'px';
-          icon.innerHTML = '&#9650;'; // Flecha hacia arriba
+          icon.innerHTML = '&#9650;'; // Up arrow
         } else {
           paragraph.style.maxHeight = '0';
-          icon.innerHTML = '&#9660;'; // Flecha hacia abajo
+          icon.innerHTML = '&#9660;'; // Down arrow
         }
       });
     });

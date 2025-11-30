@@ -205,14 +205,17 @@ footer p {
   line-height: 1.8;
 }
 
-/* Estilo para la lista de servicios */
+/* Estilo para la lista de servicios (Grid) */
 .servicios-lista {
   display: grid;
-  grid-template-columns: 1fr;
+  grid-template-columns: 1fr; /* 1 columna en móvil */
   gap: 2rem;
   padding: 0 1rem;
+  max-width: 1200px; /* Límite de ancho para que no se estiren demasiado */
+  margin: 0 auto; /* Centrar la grilla en la pantalla */
 }
 
+/* Estilo de la Tarjeta (Card) */
 .servicio {
   position: relative;
   background: #222;
@@ -220,46 +223,83 @@ footer p {
   border-radius: 10px;
   border: 1px solid #333;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
+  
+  /* Flexbox para ordenar el contenido interno */
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  text-align: center;
-  height: 100%;
+  
+  /* CAMBIO CLAVE: space-between empuja el contenido:
+     El título arriba, el texto al medio, y el botón/enlaces al final. */
+  justify-content: space-between; 
+  
+  height: 100%; /* Hace que todas las tarjetas tengan la misma altura visual */
+  min-height: 300px; /* Altura mínima para que no se vean aplastadas */
 }
 
 .servicio:hover {
   transform: translateY(-10px);
   box-shadow: 0 8px 15px rgba(255, 255, 255, 0.1);
+  border-color: #555;
 }
 
 .servicio h3 {
   color: #fff;
   margin-bottom: 1rem;
   font-size: 1.8rem;
+  width: 100%; /* Para asegurar que el título ocupe el ancho disponible */
 }
 
 .servicio p {
   color: #bbb;
   font-size: 1.1rem;
   line-height: 1.6;
+  margin-bottom: 1.5rem; /* Espacio extra antes del botón/enlaces */
 }
 
+/* Ajuste específico para la lista de enlaces de Roblox */
+.servicio ul {
+    width: 100%;
+    text-align: left;
+    background: rgba(255, 255, 255, 0.05);
+    padding: 15px;
+    border-radius: 8px;
+}
 
+.servicio ul li a {
+    transition: color 0.3s ease;
+}
 
+.servicio ul li a:hover {
+    color: #e94d4d !important; /* Color rojo al pasar el mouse por los links de Roblox */
+}
 
+/* --- Responsive Styles (Adaptación a pantallas) --- */
 
+/* Tablets (2 columnas) */
+@media (min-width: 768px) {
+  .servicios-lista {
+    grid-template-columns: repeat(2, 1fr); 
+  }
+}
 
+/* Desktop (3 columnas - Ideal para Discord, Minecraft, Roblox) */
+@media (min-width: 1024px) {
+  .servicios-lista {
+    grid-template-columns: repeat(3, 1fr); 
+  }
+}
 
+/* --- Estilos Legacy (Deshabilitados/Candado) --- */
+/* Mantengo esto por si en el futuro necesitas bloquear algo de nuevo */
 
-/* Capa deshabilitada con fondo gris */
 .disabled-overlay {
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.7); /* Fondo oscuro con opacidad */
+  background-color: rgba(0, 0, 0, 0.85); /* Un poco más oscuro para mejor lectura */
   color: #fff;
   display: flex;
   flex-direction: column;
@@ -267,69 +307,34 @@ footer p {
   justify-content: center;
   border-radius: 10px;
   text-align: center;
-  visibility: hidden; /* Invisible por defecto */
+  visibility: hidden;
   opacity: 0;
   transition: opacity 0.3s ease;
+  z-index: 10;
 }
 
 .disabled-overlay .lock-icon {
-  font-size: 2rem;
+  font-size: 2.5rem;
   margin-bottom: 1rem;
+  color: #ff4444;
 }
 
 .servicio .disabled-overlay p {
   font-size: 1.2rem;
   font-weight: bold;
   text-transform: uppercase;
+  color: white;
+  margin: 0;
 }
 
-/* Mostrar el overlay solo en el servicio de Roblox Studio */
-.servicio.roblx-disabled .disabled-overlay {
-  visibility: visible;
-  opacity: 1;
-}
-
-/* Aplicar un estilo de opacidad reducida al servicio de Roblox Studio */
-.servicio.roblx-disabled {
-  opacity: 0.5;
-  pointer-events: none; /* Deshabilitar interacciones */
-}
-
-
-/* Mostrar el overlay solo en el servicio de Minecraft */
+/* Clases para activar el bloqueo */
+.servicio.roblx-disabled .disabled-overlay,
 .servicio.mc-disabled .disabled-overlay {
   visibility: visible;
   opacity: 1;
 }
 
-/* Aplicar un estilo de opacidad reducida al servicio de Minecraft */
+.servicio.roblx-disabled,
 .servicio.mc-disabled {
-  opacity: 0.5;
-  pointer-events: none; /* Deshabilitar interacciones */
-}
-
-
-
-
-
-
-
-
-/* Responsive Styles */
-@media (min-width: 768px) {
-  .servicios-lista {
-    grid-template-columns: repeat(2, 1fr); /* Dos columnas en pantallas medianas */
-  }
-}
-
-@media (min-width: 1024px) {
-  .servicios-lista {
-    grid-template-columns: repeat(3, 1fr); /* Tres columnas en pantallas grandes */
-  }
-}
-
-@media (min-width: 1200px) {
-  .servicios-lista {
-    grid-template-columns: repeat(4, 1fr); /* Cuatro columnas en pantallas extra grandes */
-  }
+  pointer-events: none;
 }

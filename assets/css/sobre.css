@@ -11,171 +11,127 @@ body {
   line-height: 1.6;
   color: #fff;
   background-color: #111;
+  overflow-x: hidden; /* Evita scroll lateral indeseado */
 }
 
 a {
   text-decoration: none;
   color: inherit;
+  transition: color 0.3s ease;
 }
 
-/* Header */
+/* --- HEADER --- */
 header {
-  background-color: #111;
-  padding: 20px 0;
-  border-bottom: 2px solid #444;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  background-color: rgba(17, 17, 17, 0.95); /* Un poco transparente para efecto moderno */
+  padding: 15px 0;
+  border-bottom: 1px solid #333;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+  position: sticky; /* Hace que el menú se quede fijo arriba al bajar */
+  top: 0;
+  z-index: 1000; /* Asegura que esté siempre encima de todo */
+  backdrop-filter: blur(10px); /* Efecto borroso detrás del menú */
 }
 
 header .container {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  max-width: 1200px;
+  max-width: 1400px; /* Un poco más ancho para que quepan tus 10 enlaces */
   margin: 0 auto;
   padding: 0 20px;
 }
 
-/* Logo */
+/* --- LOGO --- */
 header .logo a {
-  font-size: 2rem;
+  font-size: 1.8rem;
   font-weight: bold;
   color: #fff;
   letter-spacing: 1px;
-  position: relative;
-  transition: color 0.3s ease, text-shadow 0.3s ease;
-}
-
-header .logo a::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: linear-gradient(90deg, rgba(255, 255, 255, 0.5), rgba(0, 0, 0, 0.5));
-  z-index: -1;
-  transition: opacity 0.3s ease;
+  text-transform: uppercase;
+  transition: text-shadow 0.3s ease;
 }
 
 header .logo a:hover {
-  color: #fff;
-  text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #fff, 0 0 50px #fff;
+  text-shadow: 0 0 10px rgba(255, 255, 255, 0.8), 
+               0 0 20px rgba(88, 101, 242, 0.6); /* Brillo azulado/blanco */
 }
 
-header .logo a:hover::before {
-  opacity: 0;
-}
-
-/* Navigation Links */
+/* --- NAVEGACIÓN (BOTONES) --- */
 nav .nav-links {
   list-style: none;
   display: flex;
-  gap: 20px;
+  gap: 5px; /* Menos espacio entre botones para que quepan todos */
+  align-items: center;
 }
 
 nav .nav-links li {
-  font-size: 1rem;
+  position: relative;
 }
 
 nav .nav-links a {
-  color: #fff;
-  position: relative;
-  font-weight: bold;
-  padding: 5px;
-  transition: color 0.3s ease, transform 0.3s ease, text-shadow 0.3s ease;
+  font-size: 0.9rem; /* Texto un pelín más pequeño para que entre todo */
+  font-weight: 600;
+  color: #ccc; /* Gris claro por defecto */
+  padding: 8px 12px; /* Relleno fijo: NO CAMBIA al pasar el mouse */
+  border-radius: 6px;
+  transition: all 0.3s ease;
+  display: block;
 }
 
+/* Efecto Hover (Pasar el mouse) */
+nav .nav-links a:hover,
+nav .nav-links a.active {
+  color: #fff;
+  background-color: rgba(255, 255, 255, 0.1); /* Fondo gris transparente */
+  transform: translateY(-2px); /* Se eleva un poquito */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+/* Línea animada debajo (Opcional, si te gusta el estilo subrayado) */
 nav .nav-links a::after {
   content: '';
   position: absolute;
-  left: 0;
-  bottom: -4px;
+  left: 50%;
+  bottom: 0;
   width: 0;
   height: 2px;
-  background-color: #fff;
-  transition: width 0.3s ease;
-}
-
-/* Hover effects for links */
-nav .nav-links a:hover {
-  color: #fff;
-  text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #fff, 0 0 50px #fff;
-  transform: translateY(-2px);
+  background-color: #5865F2; /* Color Discord/Marca */
+  transition: all 0.3s ease;
+  transform: translateX(-50%); /* Centrado */
 }
 
 nav .nav-links a:hover::after,
 nav .nav-links a.active::after {
-  width: 100%;
+  width: 80%; /* La línea crece al 80% del ancho del botón */
 }
 
-/* Hover animation for the links */
-nav .nav-links a:hover {
-  padding: 10px 15px;
-  border-radius: 5px;
-  background-color: transparent;
-  transition: padding 0.3s ease, transform 0.3s ease;
-}
-
-nav .nav-links a:active {
-  transform: translateY(2px);
-}
-
-/* Add glow effect on hover for the whole header */
-header:hover {
-  background-color: #222;
-  box-shadow: 0 4px 20px rgba(255, 255, 255, 0.2);
-}
-
-/* Responsive Styles */
-@media (max-width: 768px) {
+/* --- RESPONSIVE (Móvil y Tablets) --- */
+/* Como tienes muchos enlaces, en pantallas medianas y pequeñas hay que adaptar */
+@media (max-width: 1200px) {
   header .container {
-    flex-direction: column;
-    align-items: flex-start;
+    flex-direction: column; /* Pone el logo arriba y el menú abajo */
+    gap: 15px;
   }
 
   nav .nav-links {
-    flex-direction: column;
+    flex-wrap: wrap; /* Permite que los botones bajen a otra línea si no caben */
+    justify-content: center;
     gap: 10px;
   }
-
-  #services-preview .service-cards {
-    flex-direction: column;
-  }
-
-  .hero h2 {
-    font-size: 2rem;
-  }
-
-  .hero p {
-    font-size: 1rem;
-  }
-
-  .hero .btn {
-    padding: 10px 25px;
-    font-size: 0.9rem;
+  
+  nav .nav-links a {
+    font-size: 0.85rem;
+    padding: 6px 10px;
   }
 }
 
-/* Footer */
-footer {
-  background-color: #111;
-  padding: 20px 0;
-  text-align: center;
-}
-
-footer p {
-  color: #bbb;
-  font-size: 0.9rem;
-}
 
 
 
 
 
 
-
-/* About Section */
+/* About Section - Estilos Generales */
 .section.about {
   padding: 5rem 2rem;
   background-color: #111;
@@ -198,24 +154,44 @@ footer p {
   line-height: 1.8;
 }
 
+/* Contenedor de las tarjetas (Grid System) */
 .valores {
-  display: flex;
-  flex-direction: column;
+  display: grid;
+  grid-template-columns: 1fr; /* 1 columna por defecto (Móvil) */
   gap: 2rem;
   margin-top: 3rem;
+  max-width: 1200px; /* Límite de ancho para pantallas gigantes */
+  margin-left: auto;
+  margin-right: auto;
 }
 
+/* Estilo individual de cada tarjeta */
 .valor {
   background: #222;
   padding: 2.5rem;
   border-radius: 10px;
   border: 1px solid #333;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+  
+  /* Flexbox para centrar contenido verticalmente */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  height: 100%;
 }
 
 .valor:hover {
   transform: translateY(-10px);
   box-shadow: 0 8px 15px rgba(255, 255, 255, 0.1);
+  border-color: #5865F2; /* Color de acento al pasar el mouse */
+}
+
+/* Estilo para los nuevos Iconos */
+.valor i {
+  font-size: 3rem;
+  color: #5865F2; /* Color Discord/Marca */
+  margin-bottom: 1.5rem;
 }
 
 .valor h3 {
@@ -230,15 +206,18 @@ footer p {
   line-height: 1.6;
 }
 
+/* --- Responsive Design --- */
+
+/* Tablets (2 columnas) */
 @media (min-width: 768px) {
   .valores {
-    flex-direction: row;
-    justify-content: space-between;
-    gap: 2rem;
-  }
-
-  .valor {
-    width: 30%;
+    grid-template-columns: repeat(2, 1fr); 
   }
 }
 
+/* Desktop (4 columnas - Para que quepan Comunidad, Alianzas, Org y Seguridad) */
+@media (min-width: 1100px) {
+  .valores {
+    grid-template-columns: repeat(4, 1fr); 
+  }
+}

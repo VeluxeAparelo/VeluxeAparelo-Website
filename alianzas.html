@@ -4,87 +4,122 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="icon" type="image/png" href="https://i.ibb.co/sdzSkknP/Veluxe-Aparelo.png" />
-  <meta name="description" content="VeluxeAparelo Partnerships, meet the entities that are allied or have collaborated with us.">
+  <meta name="description" content="VeluxeAparelo Partnerships. Meet our strategic allies and collaborators.">
   <title>Partnerships | VeluxeAparelo</title>
+  
   <link rel="stylesheet" href="assets/css/alianzas.css" />
+  
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+  
+  <style>
+    .alianza-links {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+        margin-top: 15px;
+    }
+    .alianza-link {
+        flex: 1 1 40%; /* Que ocupen espacio equitativo */
+        text-align: center;
+        background: #333;
+        padding: 8px;
+        border-radius: 5px;
+        color: white;
+        text-decoration: none;
+        transition: background 0.3s;
+        font-size: 0.9rem;
+    }
+    .alianza-link:hover {
+        background: #5865F2;
+    }
+    .alianza-item img {
+        width: 100%;
+        height: 200px;
+        object-fit: cover;
+        border-radius: 8px;
+        margin-bottom: 15px;
+    }
+  </style>
 </head>
 <body>
- <header>
+  <header>
     <div class="container">
       <h1 class="logo"><a href="index.html">VeluxeAparelo</a></h1>
       <nav>
         <ul class="nav-links">
-          <li><a href="index.html" class="active">Home</a></li>
+          <li><a href="index.html">Home</a></li>
           <li><a href="sobre.html">About Us</a></li>
           <li><a href="servicios.html">Services</a></li>
           <li><a href="store.html">Store</a></li>
           <li><a href="faq.html">FAQ</a></li>
           <li><a href="status.html">Status</a></li>
           <li><a href="contacto.html">Contact</a></li>
+          <li><a href="alianzas.html" class="active">Partnerships</a></li>
+          <li><a href="equipo.html">Team</a></li>
         </ul>
       </nav>
     </div>
- </header>
+  </header>
 
   <main>
-  <section class="section alianzas">
-    <div class="container">
-      <h2>Partnerships & Collaborations</h2>
-      <p>Meet the entities that are allied or have actively participated with VeluxeAparelo. These are our most featured collaborations:</p>
+    <section class="section alianzas">
+      <div class="container">
+        <h2 style="font-size: 2.5rem; margin-bottom: 1rem;"><i class="fas fa-handshake"></i> Partnerships & Collaborations</h2>
+        <p style="margin-bottom: 3rem;">Meet the entities that are allied or have actively participated with VeluxeAparelo. Together we build a stronger community.</p>
 
-      <div class="alianzas-lista">
-        <div class="alianza-item">
-          <img src="https://i.postimg.cc/BLb0n2LF/347222877-1728777017525661-793326778947036308-n.jpg" alt="Coral Viu">
-          <h3>Coral Viu</h3>
-          <p>Coral Viu is a company promoting marine life culture and art. They have actively collaborated with us on awareness and education initiatives.</p>
-          <div class="alianza-links">
-            <a href="https://www.coralviu.com" target="_blank" class="alianza-link"><i class="fas fa-globe"></i> Visit Website</a>
-            <a href="https://www.instagram.com/coralviu/?hl=es" target="_blank" class="alianza-link"><i class="fab fa-instagram"></i> Instagram</a>
-            <a href="https://www.facebook.com/coralviu" target="_blank" class="alianza-link"><i class="fab fa-facebook"></i> Facebook</a>
-            <a href="https://www.youtube.com/@coralviu" target="_blank" class="alianza-link"><i class="fab fa-youtube"></i> YouTube</a>
-           </div>
-        </div>
+        <div class="alianzas-lista">
+          
+          <div class="alianza-item">
+            <img src="https://i.postimg.cc/BLb0n2LF/347222877-1728777017525661-793326778947036308-n.jpg" alt="Coral Viu">
+            <h3><i class="fas fa-water" style="color: #00BFFF;"></i> Coral Viu</h3>
+            <p>Coral Viu is a company promoting marine life culture and art. They have actively collaborated with us on awareness and education initiatives.</p>
+            <div class="alianza-links">
+              <a href="https://www.coralviu.com" target="_blank" class="alianza-link"><i class="fas fa-globe"></i> Website</a>
+              <a href="https://www.instagram.com/coralviu/?hl=es" target="_blank" class="alianza-link"><i class="fab fa-instagram"></i> Instagram</a>
+              <a href="https://www.facebook.com/coralviu" target="_blank" class="alianza-link"><i class="fab fa-facebook"></i> Facebook</a>
+              <a href="https://www.youtube.com/@coralviu" target="_blank" class="alianza-link"><i class="fab fa-youtube"></i> YouTube</a>
+             </div>
+          </div>
         
-         <div class="alianza-item disabled-alianza">
-            <div class="alianza-overlay">
-             <span class="lock-icon">🔒</span>
-             <span class="coming-soon">In development<br>Coming Soon</span>
+          <div class="alianza-item">
+            <img src="https://i.postimg.cc/vD9YjF9w/CVPS.jpg" alt="Salvemos Clubs | Mallorca">
+            <h3><i class="fas fa-landmark" style="color: #FFD700;"></i> Salvemos Clubs</h3>
+            <p>A movement fighting to protect cultural and leisure spaces in Mallorca. Their alliance with VeluxeAparelo drives joint community support actions.</p>
+            <div class="alianza-links">
+              <a href="https://salvemos-cvpa-andratx.glitch.me/" target="_blank" class="alianza-link"><i class="fas fa-globe"></i> Website</a>
+              <a href="https://defiendeelclubandratx.carrd.co/" target="_blank" class="alianza-link"><i class="fas fa-archive"></i> Archive</a>
+              <a href="https://www.change.org/p/defiende-el-club-de-vela-puerto-de-andratx-protege-su-futuro" target="_blank" class="alianza-link"><i class="fas fa-file-signature"></i> Petition</a>
+              <a href="https://www.instagram.com/salvemos.clubs.mallorca/" target="_blank" class="alianza-link"><i class="fab fa-instagram"></i> Instagram</a>
             </div>
-         <img src="https://via.placeholder.com/300x200" alt="TusoClub">
-          <h3>TusoClub</h3>
-          <p>This partnership is currently under development and will be available soon.</p>
-         <div class="alianza-links">
-           <a class="alianza-link disabled-link"><i class="fas fa-globe"></i> Visit Website</a>
-           <a class="alianza-link disabled-link"><i class="fab fa-instagram"></i> Instagram</a>
-           <a class="alianza-link disabled-link"><i class="fab fa-facebook"></i> Facebook</a>
           </div>
-         </div>
+          
+           <div class="alianza-item disabled-alianza" style="opacity: 0.7; position: relative;">
+              <div class="alianza-overlay">
+               <span class="lock-icon" style="font-size: 3rem; display: block; margin-bottom: 10px;">🔒</span>
+               <span class="coming-soon" style="font-weight: bold; text-transform: uppercase;">In Development<br>Coming Soon</span>
+              </div>
+              <img src="https://via.placeholder.com/300x200/111/555?text=TusoClub" alt="TusoClub" style="filter: blur(2px);">
+              <h3>TusoClub</h3>
+              <p>This partnership is currently under development and will be available soon.</p>
+              <div class="alianza-links">
+                <span class="alianza-link disabled-link" style="cursor: not-allowed; background: #222; color: #555;"><i class="fas fa-globe"></i> Website</span>
+              </div>
+           </div>
 
-        
-
-        <div class="alianza-item">
-          <img src="https://i.postimg.cc/vD9YjF9w/CVPS.jpg" alt="Salvemos Clubs | Mallorca"> <h3>Salvemos Clubs | Mallorca</h3>
-          <p>A movement fighting to protect cultural and leisure spaces in Mallorca. Their alliance with VeluxeAparelo drives joint community support actions.</p>
-          <div class="alianza-links">
-            <a href="https://salvemos-cvpa-andratx.glitch.me/" target="_blank" class="alianza-link"><i class="fas fa-globe"></i> Visit Website</a>
-            <a href="https://defiendeelclubandratx.carrd.co/" target="_blank" class="alianza-link"><i class="fas fa-globe"></i> Archive Website</a>
-            <a href="https://www.change.org/p/defiende-el-club-de-vela-puerto-de-andratx-protege-su-futuro" target="_blank" class="alianza-link"><i class="fas fa-globe"></i> Sign Petition</a>
-            <a href="https://www.instagram.com/salvemos.clubs.mallorca/" target="_blank" class="alianza-link"><i class="fab fa-instagram"></i> Instagram</a>
-            <a href="https://x.com/Mallorca_clubs" target="_blank" class="alianza-link"><i class="fab fa-x"></i>X-Twitter</a>
-            <a href="https://www.tiktok.com/@salvemos.mallorca.clubs?lang=es" target="_blank" class="alianza-link"><i class="fab fa-tiktok"></i> TikTok</a>
-          </div>
         </div>
-        
       </div>
-    </div>
-  </section>
-</main>
-
+    </section>
+  </main>
 
   <footer>
     <div class="container">
       <p>&copy; 2025 VeluxeAparelo. All rights reserved.</p>
+      <div class="footer-links">
+        <a href="https://www.instagram.com/veluxeaparelo/" target="_blank"><i class="fab fa-instagram"></i> Instagram</a>
+        <a href="https://www.tiktok.com/@veluxeaparelo" target="_blank"><i class="fab fa-tiktok"></i> TikTok</a>
+        <a href="contacto.html">Contact Us</a>
+        <a href="privacy.html" style="color: #aaa;">Privacy Policy</a>
+      </div>
     </div>
   </footer>
 

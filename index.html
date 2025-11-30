@@ -11,11 +11,17 @@
   <meta property="og:type" content="website" />
   <link rel="icon" type="image/png" href="https://i.ibb.co/sdzSkknP/Veluxe-Aparelo.png" />
   <title>Home | VeluxeAparelo</title>
+  
   <link rel="stylesheet" href="assets/css/index.css" />
+  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+  
   <link href="https://unpkg.com/aos@next/dist/aos.css" rel="stylesheet">
   <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
   <script>
-    AOS.init();
+    document.addEventListener('DOMContentLoaded', function() {
+      AOS.init();
+    });
   </script>
 </head>
 <body>
@@ -24,6 +30,7 @@
       <h1 class="logo"><a href="index.html">VeluxeAparelo™</a></h1>
       <nav>
         <ul class="nav-links">
+          <li><a href="index.html" class="active">Home</a></li>
           <li><a href="sobre.html">About Us</a></li>
           <li><a href="servicios.html">Services</a></li>
           <li><a href="store.html">Store</a></li>
@@ -40,22 +47,52 @@
   <main>
 
     <section id="hero" class="section hero">
-      <div class="content">
+      <div class="content" data-aos="fade-in">
         <h2>Welcome to VeluxeAparelo</h2>
-        <p>Community management and administration. Simple. Secure. Powerful.</p>
+        <p>The ultimate solution for Community Management & Administration.<br><strong>Simple. Secure. Powerful.</strong></p>
         
         <div class="hero-buttons" style="margin-bottom: 25px;">
-          <a href="sobre.html" class="discord-btn">Explore more</a>
-          <a href="https://discord.gg/EcHEGd2Mph" target="_blank" class="discord-btn">Join Server</a>
-          <a href="https://patreon.com/VeluxeAparelo" target="_blank" class="discord-btn">Support us on Patreon</a>
+          <a href="sobre.html" class="discord-btn"><i class="fas fa-info-circle"></i> Explore more</a>
+          <a href="https://discord.gg/EcHEGd2Mph" target="_blank" class="discord-btn"><i class="fab fa-discord"></i> Join Server</a>
+          <a href="https://patreon.com/VeluxeAparelo" target="_blank" class="discord-btn"><i class="fab fa-patreon"></i> Support us</a>
         </div>
       </div>
     </section>
 
-    <section id="project-status" class="section project-status">
+    <section class="section features" style="background-color: #1a1a1a; padding: 4rem 2rem; text-align: center;">
       <div class="container">
-        <h2>VeluxeAparelo - Project Under Development</h2>
-        <p>Welcome to VeluxeAparelo! We are currently working on this platform, which will be available early this summer, at the end of the school year. Stay tuned for updates and our official launch!</p>
+        <h2 style="color: white; margin-bottom: 3rem;" data-aos="fade-up">Why Choose VeluxeAparelo?</h2>
+        
+        <div class="features-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 2rem;">
+          
+          <div class="feature-card" style="background: #222; padding: 2rem; border-radius: 10px; border: 1px solid #333;" data-aos="fade-up" data-aos-delay="100">
+            <i class="fas fa-shield-alt" style="font-size: 3rem; color: #5865F2; margin-bottom: 1rem;"></i>
+            <h3 style="color: white; margin-bottom: 10px;">Maximum Security</h3>
+            <p style="color: #ccc;">Protected by the VA Intelligence Agency. We ensure fair play and secure environments for all users.</p>
+          </div>
+
+          <div class="feature-card" style="background: #222; padding: 2rem; border-radius: 10px; border: 1px solid #333;" data-aos="fade-up" data-aos-delay="200">
+            <i class="fas fa-users-cog" style="font-size: 3rem; color: #5865F2; margin-bottom: 1rem;"></i>
+            <h3 style="color: white; margin-bottom: 10px;">Pro Management</h3>
+            <p style="color: #ccc;">Expert administration for Discord, Roblox, and Minecraft communities with professional staff.</p>
+          </div>
+
+          <div class="feature-card" style="background: #222; padding: 2rem; border-radius: 10px; border: 1px solid #333;" data-aos="fade-up" data-aos-delay="300">
+            <i class="fas fa-handshake" style="font-size: 3rem; color: #5865F2; margin-bottom: 1rem;"></i>
+            <h3 style="color: white; margin-bottom: 10px;">Strategic Alliances</h3>
+            <p style="color: #ccc;">We collaborate with top organizations to expand our network and provide better resources.</p>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <section id="project-status" class="section project-status" data-aos="fade-up">
+      <div class="container">
+        <h2><i class="fas fa-tools"></i> Project Under Development</h2>
+        <p>Welcome to VeluxeAparelo! We are currently working hard on this platform. The full release is scheduled for <strong>early this summer</strong>, following the end of the school year.</p>
+        <p style="font-size: 0.9rem; color: #888; margin-top: -10px;">Stay tuned for official updates!</p>
+        <br>
         <a href="sobre.html" class="btn">Learn more about us</a>
       </div>
     </section>
@@ -66,9 +103,10 @@
     <div class="container">
       <p>&copy; 2025 VeluxeAparelo. All rights reserved.</p>
       <div class="footer-links">
-        <a href="https://www.instagram.com/veluxeaparelo/" target="_blank">Instagram</a>
-        <a href="https://www.tiktok.com/@veluxeaparelo" target="_blank">TikTok</a>
+        <a href="https://www.instagram.com/veluxeaparelo/" target="_blank"><i class="fab fa-instagram"></i> Instagram</a>
+        <a href="https://www.tiktok.com/@veluxeaparelo" target="_blank"><i class="fab fa-tiktok"></i> TikTok</a>
         <a href="contacto.html">Contact Us</a>
+        <a href="privacy.html" style="color: #aaa;">Privacy Policy</a>
       </div>
     </div>
   </footer>

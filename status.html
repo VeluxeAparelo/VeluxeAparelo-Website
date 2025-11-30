@@ -6,7 +6,10 @@
   <link rel="icon" type="image/png" href="https://i.ibb.co/sdzSkknP/Veluxe-Aparelo.png" />
   <meta name="description" content="VeluxeAparelo System Status.">
   <title>Status | VeluxeAparelo</title>
+  
   <link rel="stylesheet" href="assets/css/status.css" />
+  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
 </head>
 <body>
   <header>
@@ -19,6 +22,7 @@
           <li><a href="servicios.html">Services</a></li>
           <li><a href="store.html">Store</a></li>
           <li><a href="faq.html">FAQ</a></li>
+          <li><a href="status.html" class="active">Status</a></li>
           <li><a href="contacto.html">Contact</a></li>
           <li><a href="alianzas.html">Partnerships</a></li>
           <li><a href="equipo.html">Team</a></li>
@@ -30,45 +34,45 @@
 <main>
   <section id="community-status">
     <div class="status-panel glass-effect">
-      <h2>Community Status</h2>
+      <h2 style="margin-bottom: 2rem;"><i class="fas fa-signal"></i> Community Status</h2>
 
       <div class="services-status">
-        <div class="service">
-          <div class="service-header">
-            <span class="service-name">Roblox</span>
-            <span class="service-icon" id="roblox-status">🔴</span>
+        
+        <div class="service" style="border-left: 4px solid #dc3545;"> <div class="service-header">
+            <span class="service-name"><i class="fas fa-gamepad"></i> Roblox</span>
+            <i class="fas fa-exclamation-triangle" id="roblox-status" style="color: #dc3545; font-size: 1.5rem;"></i>
           </div>
-          <p class="service-error" id="roblox-error">
+          <p class="service-error" id="roblox-error" style="color: #ff6b6b;">
+            <strong>Status: Banned</strong><br>
             VeluxeAparelo account banned for 6 months.<br>
             Ban date: Aug 10, 2025, 3:31 PM.<br>
-            Reactivation in: <span id="roblox-countdown"></span>
+            Reactivation in: <span id="roblox-countdown" style="font-family: monospace; font-weight: bold; color: white;">Loading...</span>
           </p>
         </div>
 
-        <div class="service">
-          <div class="service-header">
-            <span class="service-name">Discord</span>
-            <span class="service-icon" id="discord-status">🟢</span>
+        <div class="service" style="border-left: 4px solid #4ade80;"> <div class="service-header">
+            <span class="service-name"><i class="fab fa-discord"></i> Discord</span>
+            <i class="fas fa-check-circle" id="discord-status" style="color: #4ade80; font-size: 1.5rem;"></i>
           </div>
           <p class="service-error" style="color: #4ade80;">
             All systems operational. Staff fully active.
           </p>
         </div>
 
-        <div class="service">
+        <div class="service" style="border-left: 4px solid #4ade80;">
           <div class="service-header">
-            <span class="service-name">Minecraft</span>
-            <span class="service-icon" id="minecraft-status">🟢</span>
+            <span class="service-name"><i class="fas fa-cube"></i> Minecraft</span>
+            <i class="fas fa-check-circle" id="minecraft-status" style="color: #4ade80; font-size: 1.5rem;"></i>
           </div>
           <p class="service-error" style="color: #4ade80;">
             Server online and operational.
           </p>
         </div>
 
-        <div class="service">
+        <div class="service" style="border-left: 4px solid #4ade80;">
           <div class="service-header">
-            <span class="service-name">Central Discord Server</span>
-            <span class="service-icon" id="central-status">🟢</span>
+            <span class="service-name"><i class="fas fa-server"></i> Central Discord Server</span>
+            <i class="fas fa-check-circle" id="central-status" style="color: #4ade80; font-size: 1.5rem;"></i>
           </div>
           <p class="service-error" style="color: #4ade80;">
             Operational.
@@ -76,10 +80,29 @@
         </div>
       </div>
       
-      <button id="refresh-status" class="discord-btn">Refresh Status</button>
+      <div style="text-align: center; margin-top: 2rem;">
+        <button id="refresh-status" class="discord-btn"><i class="fas fa-sync-alt"></i> Refresh Status</button>
+      </div>
+      
+      <p style="text-align: center; font-size: 0.8rem; color: #666; margin-top: 10px;">
+        Updates automatically every second.
+      </p>
+
     </div>
   </section>
 </main>
+
+  <footer>
+    <div class="container">
+      <p>&copy; 2025 VeluxeAparelo. All rights reserved.</p>
+      <div class="footer-links">
+        <a href="https://www.instagram.com/veluxeaparelo/" target="_blank"><i class="fab fa-instagram"></i> Instagram</a>
+        <a href="https://www.tiktok.com/@veluxeaparelo" target="_blank"><i class="fab fa-tiktok"></i> TikTok</a>
+        <a href="contacto.html">Contact Us</a>
+        <a href="privacy.html" style="color: #aaa;">Privacy Policy</a>
+      </div>
+    </div>
+  </footer>
 
 <script src="assets/js/status.js"></script>
 </body>

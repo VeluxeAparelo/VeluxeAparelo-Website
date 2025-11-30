@@ -2,13 +2,57 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>VeluxeAparelo</title>
+  <title>Contact | VeluxeAparelo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="icon" type="image/png" href="https://i.ibb.co/sdzSkknP/Veluxe-Aparelo.png" />
-  <meta name="description" content="Get in touch with VeluxeAparelo through our social media or email.">
-  <title>Contact | VeluxeAparelo</title>
+  <meta name="description" content="Get in touch with VeluxeAparelo through our social media, Discord, or email.">
+  
   <link rel="stylesheet" href="assets/css/contacto.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+
+  <style>
+    .social-links {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+        gap: 15px;
+        margin-top: 15px;
+    }
+    .social-card {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 20px;
+        background: #222;
+        border-radius: 8px;
+        text-decoration: none;
+        color: white;
+        border: 1px solid #333;
+        transition: all 0.3s ease;
+    }
+    .social-card i {
+        font-size: 2rem;
+        margin-bottom: 10px;
+    }
+    .social-card:hover {
+        transform: translateY(-5px);
+        background: #333;
+    }
+    /* Colores específicos al hacer hover */
+    .instagram:hover { border-color: #E1306C; color: #E1306C; }
+    .tiktok:hover { border-color: #00f2ea; color: #00f2ea; }
+    .x:hover { border-color: #fff; color: #fff; }
+    .discord-contact:hover { border-color: #5865F2; color: #5865F2; }
+    
+    .email-box {
+        background: #1a1a1a;
+        padding: 20px;
+        border-radius: 8px;
+        border: 1px solid #333;
+        display: inline-block;
+        margin-top: 10px;
+    }
+  </style>
 </head>
 <body>
   <header>
@@ -16,12 +60,13 @@
       <h1 class="logo"><a href="index.html">VeluxeAparelo</a></h1>
       <nav>
         <ul class="nav-links">
-          <li><a href="index.html" class="active">Home</a></li>
+            <li><a href="index.html">Home</a></li>
           <li><a href="sobre.html">About Us</a></li>
           <li><a href="servicios.html">Services</a></li>
           <li><a href="store.html">Store</a></li>
           <li><a href="faq.html">FAQ</a></li>
           <li><a href="status.html">Status</a></li>
+          <li><a href="contacto.html" class="active">Contact</a></li>
           <li><a href="alianzas.html">Partnerships</a></li>
           <li><a href="equipo.html">Team</a></li>
         </ul>
@@ -32,34 +77,48 @@
   <main>
     <section class="section contacto">
       <div class="container">
-        <h2>Contact</h2>
-        <p>Do you have any questions or want to collaborate with us? Do not hesitate to contact us!</p>
+        <h2>Contact Us</h2>
+        <p>Do you have questions, want to report an issue, or collaborate with us? Choose your preferred method below.</p>
 
         <div class="contact-methods">
+          
           <div class="contact-method">
-            <h3>Social Media</h3>
-            <p>Follow us on our social media for more updates and news:</p>
+            <h3>Social Media & Support</h3>
+            <p>Follow us for updates or join our Discord for <strong>direct ticket support</strong>:</p>
+            
             <div class="social-links">
+              <a href="https://discord.gg/EcHEGd2Mph" target="_blank" class="social-card discord-contact">
+                <i class="fab fa-discord"></i>
+                Discord Support
+              </a>
+
               <a href="https://www.instagram.com/veluxeaparelo/" target="_blank" class="social-card instagram">
                 <i class="fab fa-instagram"></i>
                 Instagram
               </a>
+
               <a href="https://www.tiktok.com/@veluxeaparelo" target="_blank" class="social-card tiktok">
                 <i class="fab fa-tiktok"></i>
                 TikTok
               </a>
+
               <a href="https://x.com/VeluxeAparelo" target="_blank" class="social-card x">
                 <i class="fab fa-x"></i>
-                X (formerly Twitter)
+                X (Twitter)
               </a>
             </div>
           </div>
 
-          <div class="contact-method">
-            <h3>Email</h3>
-            <p>If you prefer direct contact, send us an email:</p>
-            <a href="mailto:VeluxeAparelo@gmail.com" class="email">VeluxeAparelo@gmail.com</a>
+          <div class="contact-method" style="margin-top: 3rem;">
+            <h3><i class="fas fa-envelope"></i> Email Inquiries</h3>
+            <p>For business proposals, partnerships, or legal matters, please email us directly:</p>
+            <div class="email-box">
+                <a href="mailto:VeluxeAparelo@gmail.com" class="email" style="font-size: 1.2rem; color: #5865F2; text-decoration: none;">
+                    VeluxeAparelo@gmail.com
+                </a>
+            </div>
           </div>
+
         </div>
       </div>
     </section>
@@ -68,6 +127,12 @@
   <footer>
     <div class="container">
       <p>&copy; 2025 VeluxeAparelo. All rights reserved.</p>
+      <div class="footer-links">
+        <a href="https://www.instagram.com/veluxeaparelo/" target="_blank"><i class="fab fa-instagram"></i> Instagram</a>
+        <a href="https://www.tiktok.com/@veluxeaparelo" target="_blank"><i class="fab fa-tiktok"></i> TikTok</a>
+        <a href="contacto.html">Contact Us</a>
+        <a href="privacy.html" style="color: #aaa;">Privacy Policy</a>
+      </div>
     </div>
   </footer>
 

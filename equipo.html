@@ -11,19 +11,111 @@
   
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
   
+  <link href="https://unpkg.com/aos@next/dist/aos.css" rel="stylesheet">
+  
   <style>
-    .rol i {
-        font-size: 3rem;
-        margin-bottom: 15px;
-        display: block;
+    /* Grid System mejorado */
+    .roles-list {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 30px;
+        margin-top: 40px;
     }
+
+    /* Estilo Base de la Tarjeta */
     .rol {
+        background: rgba(30, 30, 30, 0.6); /* Fondo semi-transparente */
+        backdrop-filter: blur(10px); /* Efecto cristal */
+        padding: 2.5rem 2rem;
+        border-radius: 15px;
+        border: 1px solid rgba(255, 255, 255, 0.05); /* Borde sutil */
         text-align: center;
-        transition: transform 0.3s ease;
+        transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275); /* Animación elástica */
+        position: relative;
+        overflow: hidden;
     }
+
+    /* Iconos */
+    .rol i {
+        font-size: 3.5rem;
+        margin-bottom: 20px;
+        display: block;
+        transition: all 0.4s ease;
+    }
+
+    /* Textos */
+    .rol h3 {
+        color: #fff;
+        margin-bottom: 10px;
+        font-size: 1.5rem;
+        font-weight: bold;
+    }
+    .rol p {
+        color: #ccc;
+        font-size: 1rem;
+        line-height: 1.6;
+    }
+
+    /* --- HOVER EFFECTS (Dinamismo) --- */
+    
     .rol:hover {
-        transform: translateY(-5px);
+        transform: translateY(-10px) scale(1.02); /* Sube y crece un poco */
     }
+    
+    .rol:hover i {
+        transform: scale(1.2) rotate(5deg); /* El icono crece y gira */
+    }
+
+    /* --- COLORES ESPECÍFICOS (NEÓN) --- */
+
+    /* Gold - External Board */
+    .role-gold { border-top: 4px solid #ffd700; }
+    .role-gold i { color: #ffd700; }
+    .role-gold:hover { 
+        box-shadow: 0 10px 30px rgba(255, 215, 0, 0.2); 
+        border-color: #ffd700;
+    }
+
+    /* Blue - Internal Board */
+    .role-blue { border-top: 4px solid #5865F2; }
+    .role-blue i { color: #5865F2; }
+    .role-blue:hover { 
+        box-shadow: 0 10px 30px rgba(88, 101, 242, 0.3); 
+        border-color: #5865F2;
+    }
+
+    /* Red - CEO */
+    .role-red { border-top: 4px solid #dc3545; }
+    .role-red i { color: #dc3545; }
+    .role-red:hover { 
+        box-shadow: 0 10px 30px rgba(220, 53, 69, 0.3); 
+        border-color: #dc3545;
+    }
+
+    /* Cyan - Intelligence Agency (Tech/Spy look) */
+    .role-intel { border-top: 4px solid #00f2ea; }
+    .role-intel i { color: #00f2ea; }
+    .role-intel:hover { 
+        box-shadow: 0 10px 30px rgba(0, 242, 234, 0.25); 
+        border-color: #00f2ea;
+    }
+
+    /* Orange - Community Manager */
+    .role-orange { border-top: 4px solid #fd7e14; }
+    .role-orange i { color: #fd7e14; }
+    .role-orange:hover { 
+        box-shadow: 0 10px 30px rgba(253, 126, 20, 0.25); 
+        border-color: #fd7e14;
+    }
+
+    /* Green - Staff */
+    .role-green { border-top: 4px solid #2ecc71; }
+    .role-green i { color: #2ecc71; }
+    .role-green:hover { 
+        box-shadow: 0 10px 30px rgba(46, 204, 113, 0.25); 
+        border-color: #2ecc71;
+    }
+
   </style>
 </head>
 <body>
@@ -41,6 +133,7 @@
           <li><a href="contacto.html">Contact</a></li>
           <li><a href="alianzas.html">Partnerships</a></li>
           <li><a href="equipo.html" class="active">Team</a></li>
+          <li><a href="organizaciones.html">Organizations</a></li>
         </ul>
       </nav>
     </div>
@@ -49,33 +142,47 @@
   <main>
     <section class="section equipo">
       <div class="container">
-        <h2>Leadership & Governance</h2>
-        <p>Meet the structure that drives VeluxeAparelo's vision and operations.</p>
+        <div data-aos="fade-down">
+            <h2>Leadership & Governance</h2>
+            <p>Meet the structure that drives VeluxeAparelo's vision, security, and operations.</p>
+        </div>
 
         <div class="roles-list">
           
-          <div class="rol" style="border-top: 3px solid #ffd700;">
-            <i class="fas fa-crown" style="color: #ffd700;"></i>
+          <div class="rol role-gold" data-aos="fade-up" data-aos-delay="100">
+            <i class="fas fa-crown"></i>
             <h3>External Board of Directors</h3>
             <p>The highest authority in the organization. Responsible for supervising strategic decisions and ensuring long-term stability.</p>
           </div>
 
-          <div class="rol" style="border-top: 3px solid #5865F2;">
-            <i class="fas fa-users-cog" style="color: #5865F2;"></i>
+          <div class="rol role-blue" data-aos="fade-up" data-aos-delay="200">
+            <i class="fas fa-users-cog"></i>
             <h3>Internal Board of Directors</h3>
-            <p>In charge of internal administration, staff management, and daily operational decisions within VeluxeAparelo.</p>
+            <p>In charge of internal administration, high-level management, and daily operational decisions within VeluxeAparelo.</p>
           </div>
 
-          <div class="rol" style="border-top: 3px solid #dc3545;">
-            <i class="fas fa-user-tie" style="color: #dc3545;"></i>
+          <div class="rol role-red" data-aos="fade-up" data-aos-delay="300">
+            <i class="fas fa-user-tie"></i>
             <h3>CEO</h3>
             <p>Chief Executive Officer. Overall responsible for the vision, mission, and global development of the project.</p>
           </div>
 
-          <div class="rol" style="border-top: 3px solid #0dcaf0;">
-            <i class="fas fa-tasks" style="color: #0dcaf0;"></i>
-            <h3>COO</h3>
-            <p>Chief Operating Officer. Responsible for overseeing daily operations and coordinating departments to achieve objectives efficiently.</p>
+          <div class="rol role-intel" data-aos="fade-up" data-aos-delay="400">
+            <i class="fas fa-user-secret"></i>
+            <h3>Intelligence Agency</h3>
+            <p>Internal security division. Responsible for investigations, fraud prevention, anti-cheat enforcement, and community integrity.</p>
+          </div>
+
+          <div class="rol role-orange" data-aos="fade-up" data-aos-delay="500">
+            <i class="fas fa-bullhorn"></i>
+            <h3>Community Manager</h3>
+            <p>The bridge between the community and the administration. Responsible for events, announcements, and user engagement.</p>
+          </div>
+
+          <div class="rol role-green" data-aos="fade-up" data-aos-delay="600">
+            <i class="fas fa-id-badge"></i>
+            <h3>Staff Team</h3>
+            <p><strong>Administration & Moderation</strong>. The frontline team ensuring rules are followed and maintaining order within our platforms.</p>
           </div>
 
         </div>
@@ -96,5 +203,13 @@
   </footer>
 
   <script src="assets/js/script.js"></script>
+  
+  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script>
+    AOS.init({
+      duration: 800, // Duración de la animación en ms
+      once: true,    // Animar solo la primera vez que se hace scroll
+    });
+  </script>
 </body>
 </html>

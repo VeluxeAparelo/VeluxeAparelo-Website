@@ -1,12 +1,127 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="icon" type="image/png" href="https://i.ibb.co/sdzSkknP/Veluxe-Aparelo.png" />
-  <meta name="description" content="Adquiere productos y servicios exclusivos de VeluxeAparelo.">
+  <meta name="description" content="Purchase exclusive products, ranks, and memberships via VeluxeAparelo's Patreon.">
   <title>Store | VeluxeAparelo</title>
+  
   <link rel="stylesheet" href="assets/css/store.css" />
+  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+
+  <style>
+    /* Fondo y estructura principal */
+    .store-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        min-height: 70vh; /* Ocupa buena parte de la pantalla */
+        text-align: center;
+        padding: 2rem;
+        background: #111;
+    }
+
+    /* Tarjeta estilo "Glass" */
+    .store-card {
+        background: rgba(30, 30, 30, 0.6);
+        backdrop-filter: blur(10px);
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        padding: 3rem;
+        border-radius: 15px;
+        max-width: 600px;
+        width: 100%;
+        box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+        transition: transform 0.3s ease;
+    }
+
+    .store-card:hover {
+        transform: translateY(-5px);
+        border-color: #f96854; /* Color Patreon al hover */
+    }
+
+    /* Icono Patreon grande */
+    .patreon-icon {
+        font-size: 4rem;
+        color: #f96854; /* Color oficial Patreon */
+        margin-bottom: 1.5rem;
+    }
+
+    .store-card h2 {
+        color: #fff;
+        font-size: 2rem;
+        margin-bottom: 1rem;
+    }
+
+    .store-card p {
+        color: #ccc;
+        font-size: 1.1rem;
+        margin-bottom: 2rem;
+        line-height: 1.6;
+    }
+
+    /* Lista de beneficios */
+    .benefits-list {
+        list-style: none;
+        padding: 0;
+        margin-bottom: 2rem;
+        text-align: left;
+        display: inline-block;
+    }
+
+    .benefits-list li {
+        color: #eee;
+        margin-bottom: 10px;
+        font-size: 1.05rem;
+    }
+
+    .benefits-list i {
+        color: #4ade80; /* Check verde */
+        margin-right: 10px;
+    }
+
+    /* Botón Patreon */
+    .btn-patreon {
+        background-color: #f96854;
+        color: #fff;
+        padding: 15px 30px;
+        border-radius: 8px;
+        text-decoration: none;
+        font-weight: bold;
+        font-size: 1.2rem;
+        display: inline-block;
+        transition: all 0.3s ease;
+        box-shadow: 0 4px 15px rgba(249, 104, 84, 0.4);
+    }
+
+    .btn-patreon:hover {
+        background-color: #ff424d;
+        transform: scale(1.05);
+        box-shadow: 0 6px 20px rgba(249, 104, 84, 0.6);
+    }
+
+    /* Métodos de pago */
+    .payment-methods {
+        margin-top: 2rem;
+        padding: 1rem;
+        background: rgba(255,255,255,0.05);
+        border-radius: 10px;
+        display: inline-flex;
+        gap: 15px;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    .payment-methods img {
+        height: 35px;
+        transition: opacity 0.3s;
+    }
+    .payment-methods img:hover {
+        opacity: 0.8;
+    }
+  </style>
 </head>
 <body>
   <header>
@@ -14,7 +129,7 @@
       <h1 class="logo"><a href="index.html">VeluxeAparelo</a></h1>
       <nav>
         <ul class="nav-links">
-         <li><a href="index.html">Home</a></li>
+           <li><a href="index.html">Home</a></li>
           <li><a href="sobre.html">About Us</a></li>
           <li><a href="servicios.html">Services</a></li>
           <li><a href="store.html" class="active">Store</a></li>
@@ -23,34 +138,62 @@
           <li><a href="contacto.html">Contact</a></li>
           <li><a href="alianzas.html">Partnerships</a></li>
           <li><a href="equipo.html">Team</a></li>
+          <li><a href="organizaciones.html">Organizations</a></li>
         </ul>
       </nav>
     </div>
   </header>
 
-<main class="store-container">
-  <h2>Nuestra Tienda</h2>
-  <div class="store-message">
-    <p>El sistema de pagos y membresías de VeluxeAparelo se ha movido a <strong>Patreon</strong>.</p>
-    <p>Para adquirir cualquier plan o membresía, por favor visita:</p>
-    <a href="https://patreon.com/VeluxeAparelo" target="_blank" class="btn">Ir a Patreon</a>
-  </div>
-</main>
+  <main class="store-container">
+    
+    <div class="store-card">
+      <i class="fab fa-patreon patreon-icon"></i>
+      
+      <h2>Official Store & Memberships</h2>
+      
+      <p>
+        To ensure maximum security and provide better automated rewards, the entire VeluxeAparelo payment and membership system has moved to <strong>Patreon</strong>.
+      </p>
 
+      <ul class="benefits-list">
+        <li><i class="fas fa-check-circle"></i> Exclusive Discord Ranks</li>
+        <li><i class="fas fa-check-circle"></i> Priority Support</li>
+        <li><i class="fas fa-check-circle"></i> Early Access to Features</li>
+        <li><i class="fas fa-check-circle"></i> Direct Support to the Project</li>
+      </ul>
 
+      <br>
 
+      <a href="https://patreon.com/VeluxeAparelo" target="_blank" class="btn-patreon">
+        Visit our Patreon <i class="fas fa-external-link-alt" style="font-size: 0.8em; margin-left: 5px;"></i>
+      </a>
+    </div>
 
+    <div style="margin-top: 30px; text-align: center;">
+        <p style="color: #666; font-size: 0.9rem; margin-bottom: 10px;">Secured by Patreon</p>
+        <div class="payment-methods">
+          <img src="https://img.icons8.com/color/48/visa.png" alt="Visa">
+          <img src="https://img.icons8.com/color/48/mastercard.png" alt="MasterCard">
+          <img src="https://img.icons8.com/color/48/paypal.png" alt="PayPal">
+          <img src="https://img.icons8.com/color/48/apple-pay.png" alt="Apple Pay">
+          <img src="https://img.icons8.com/color/48/google-pay.png" alt="Google Pay">
+        </div>
+    </div>
 
- <footer>
-  <div class="payment-methods">
-    <img src="https://img.icons8.com/color/48/visa.png" alt="Visa">
-    <img src="https://img.icons8.com/color/48/mastercard.png" alt="MasterCard">
-    <img src="https://img.icons8.com/color/48/paypal.png" alt="PayPal">
-    <img src="https://img.icons8.com/color/48/apple-pay.png" alt="Apple Pay">
-    <img src="https://img.icons8.com/color/48/google-pay.png" alt="Google Pay">
-  </div>
-  <p>&copy; 2025 VeluxeAparelo - Todos los derechos reservados.</p>
-</footer>
+  </main>
 
+  <footer>
+    <div class="container">
+      <p>&copy; 2025 VeluxeAparelo. All rights reserved.</p>
+      <div class="footer-links">
+        <a href="https://www.instagram.com/veluxeaparelo/" target="_blank"><i class="fab fa-instagram"></i> Instagram</a>
+        <a href="https://www.tiktok.com/@veluxeaparelo" target="_blank"><i class="fab fa-tiktok"></i> TikTok</a>
+        <a href="contacto.html">Contact Us</a>
+        <a href="privacy.html" style="color: #aaa;">Privacy Policy</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="assets/js/script.js"></script>
 </body>
 </html>

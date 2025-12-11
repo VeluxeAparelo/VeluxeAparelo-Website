@@ -11,30 +11,63 @@
   
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
   
+  <link href="https://unpkg.com/aos@next/dist/aos.css" rel="stylesheet">
+  
   <style>
+    /* Estilos mejorados para las tarjetas (Glassmorphism) */
     .valor {
-      background: #1a1a1a;
-      padding: 2rem;
-      border-radius: 10px;
-      border: 1px solid #333;
-      transition: transform 0.3s ease, border-color 0.3s ease;
+      background: rgba(30, 30, 30, 0.6); /* Fondo semi-transparente */
+      backdrop-filter: blur(10px); /* Efecto borroso */
+      padding: 2.5rem 2rem;
+      border-radius: 15px;
+      border: 1px solid rgba(255, 255, 255, 0.05);
       text-align: center;
+      transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
     }
+    
     .valor:hover {
-      transform: translateY(-5px);
+      transform: translateY(-10px);
       border-color: #5865F2; /* Color de acento */
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
     }
+    
     .valor i {
-      font-size: 2.5rem;
+      font-size: 3rem;
       color: #5865F2;
-      margin-bottom: 1rem;
+      margin-bottom: 1.5rem;
       display: block;
+      transition: transform 0.3s ease;
     }
+
+    .valor:hover i {
+        transform: scale(1.1) rotate(5deg);
+    }
+    
     .valores {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 20px;
+      gap: 30px;
       margin-top: 3rem;
+    }
+
+    h2 {
+        position: relative;
+        display: inline-block;
+    }
+    
+    /* Subrayado animado para el título */
+    h2::after {
+        content: '';
+        display: block;
+        width: 60px;
+        height: 4px;
+        background: #5865F2;
+        margin: 10px auto 0;
+        border-radius: 2px;
     }
   </style>
 </head>
@@ -44,7 +77,7 @@
       <h1 class="logo"><a href="index.html">VeluxeAparelo</a></h1>
       <nav>
         <ul class="nav-links">
-          <li><a href="index.html">Home</a></li>
+           <li><a href="index.html">Home</a></li>
           <li><a href="sobre.html" class="active">About Us</a></li>
           <li><a href="servicios.html">Services</a></li>
           <li><a href="store.html">Store</a></li>
@@ -53,6 +86,7 @@
           <li><a href="contacto.html">Contact</a></li>
           <li><a href="alianzas.html">Partnerships</a></li>
           <li><a href="equipo.html">Team</a></li>
+          <li><a href="organizaciones.html">Organizations</a></li>
         </ul>
       </nav>
     </div>
@@ -61,40 +95,42 @@
   <main>
     <section class="section about">
       <div class="container">
-        <div style="text-align: center; margin-bottom: 3rem;">
-            <h2 style="font-size: 2.5rem; margin-bottom: 1rem;">Who are we?</h2>
-            <p style="max-width: 800px; margin: 0 auto; line-height: 1.6; color: #ccc;">
-              VeluxeAparelo was born with a clear mission: to <strong>revolutionize digital community management</strong>. We are not just a group; we are a structured entity dedicated to providing simple, effective, and secure tools to administer servers, automate tasks, and maintain organized digital spaces across multiple platforms.
+        
+        <div style="text-align: center; margin-bottom: 4rem;" data-aos="fade-in">
+            <h2 style="font-size: 3rem; margin-bottom: 1.5rem;">Who are we?</h2>
+            <p style="max-width: 800px; margin: 0 auto; line-height: 1.8; color: #ccc; font-size: 1.1rem;">
+              VeluxeAparelo was born with a clear mission: to <strong>create the ultimate structured gaming ecosystem</strong>. <br><br>
+              We are not a service agency; we are a disciplined social entity dedicated to maintaining organized, secure, and thriving digital spaces across Roblox, Discord, and Minecraft. We bridge the gap between casual gaming and professional community governance.
             </p>
         </div>
 
-        <hr style="border: 0; border-top: 1px solid #333; margin: 3rem 0;">
+        <hr style="border: 0; border-top: 1px solid #333; margin: 3rem 0; opacity: 0.5;">
 
-        <h3 style="text-align: center; font-size: 1.8rem; margin-bottom: 2rem;">Our Core Pillars</h3>
+        <h3 style="text-align: center; font-size: 2rem; margin-bottom: 3rem;" data-aos="fade-up">Our Core Pillars</h3>
         
         <div class="valores">
-          <div class="valor">
-            <i class="fas fa-globe"></i>
-            <h3>Community</h3>
-            <p>We specialize in the management and growth of Discord, Minecraft, and Roblox communities, fostering safe and engaging environments.</p>
+          <div class="valor" data-aos="fade-up" data-aos-delay="100">
+            <i class="fas fa-users"></i>
+            <h3>Community First</h3>
+            <p>Our heart lies in our members. We foster safe and engaging environments where players can socialize, compete, and grow within our Discord and Game Servers.</p>
           </div>
           
-          <div class="valor">
+          <div class="valor" data-aos="fade-up" data-aos-delay="200">
             <i class="fas fa-handshake"></i>
-            <h3>Partnerships</h3>
-            <p>We actively seek strategic alliances to strengthen our network. Collaboration is key to our mutual success and expansion.</p>
+            <h3>Strategic Partnerships</h3>
+            <p>We actively collaborate with other clans and organizations to create joint events. Unity is key to our mutual success and expansion.</p>
           </div>
           
-          <div class="valor">
-            <i class="fas fa-building"></i>
-            <h3>Organization</h3>
-            <p>Structure is everything. We manage internal and external organizations under the strict control and quality standards of VeluxeAparelo.</p>
+          <div class="valor" data-aos="fade-up" data-aos-delay="300">
+            <i class="fas fa-sitemap"></i>
+            <h3>Strict Organization</h3>
+            <p>Structure is everything. Our internal departments operate under high standards of quality and discipline, ensuring a chaos-free experience.</p>
           </div>
 
-          <div class="valor">
+          <div class="valor" data-aos="fade-up" data-aos-delay="400">
             <i class="fas fa-shield-alt"></i>
-            <h3>Security</h3>
-            <p>Through the <strong>VA Intelligence Agency</strong>, we ensure fair play and investigate threats to protect our users' integrity.</p>
+            <h3>Total Security</h3>
+            <p>Protected by the <strong>VA Intelligence Agency</strong>. We rigorously investigate threats and enforce fair play to protect our users' integrity.</p>
           </div>
         </div>
 
@@ -115,5 +151,13 @@
   </footer>
 
   <script src="assets/js/script.js"></script>
+  
+  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script>
+    AOS.init({
+        duration: 800,
+        once: true
+    });
+  </script>
 </body>
 </html>

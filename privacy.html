@@ -113,6 +113,36 @@
         color: #ffeca0;
     }
 
+    /* NUEVO ESTILO: Botón de Normas */
+    .rules-container {
+        text-align: center;
+        background: rgba(88, 101, 242, 0.05);
+        border: 1px dashed #5865F2;
+        padding: 25px;
+        margin: 30px 0;
+        border-radius: 8px;
+    }
+    .rules-btn {
+        display: inline-block;
+        background-color: #5865F2;
+        color: #fff !important; /* Importante para sobreescribir el color de enlace por defecto */
+        padding: 12px 30px;
+        font-size: 1rem;
+        border-radius: 5px;
+        font-weight: bold;
+        text-transform: uppercase;
+        margin-top: 15px;
+        box-shadow: 0 4px 15px rgba(88, 101, 242, 0.4);
+        transition: all 0.3s ease;
+        text-decoration: none !important;
+    }
+    .rules-btn:hover {
+        background-color: #4752c4;
+        transform: translateY(-3px);
+        box-shadow: 0 6px 20px rgba(88, 101, 242, 0.6);
+        color: #fff;
+    }
+
     hr {
         border: 0;
         border-top: 1px solid #333;
@@ -146,10 +176,16 @@
       <div class="container">
         <div class="privacy-content">
           <h1>Privacy Policy & Terms</h1>
-          <span class="subtitle">Effective Date: November 30, 2025 | Version 2.5</span>
+          <span class="subtitle">Effective Date: November 30, 2025 | Version 2.6</span>
 
           <p>Welcome to VeluxeAparelo. By accessing our website, Discord servers, Roblox groups, or Minecraft servers, you agree to be bound by this Privacy Policy and our Terms of Service. Please read these documents carefully.</p>
 
+          <div class="rules-container">
+            <h3 style="color: #5865F2; margin-top: 0;">Community Regulations & Compliance</h3>
+            <p>In addition to this Privacy Policy, all users interacting with our ecosystem are strictly required to follow the Official VeluxeAparelo Normative.</p>
+            <p style="font-size: 0.9rem; color: #888;">Failure to comply with these rules may result in immediate termination of services.</p>
+            <a href="rules.html" class="rules-btn"><i class="fas fa-book-open"></i> View Rules</a>
+          </div>
           <h2>1. Data Collection & Usage</h2>
           <p>We are transparent about the data we collect. This includes:</p>
           <ul>

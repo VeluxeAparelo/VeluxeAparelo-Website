@@ -26,6 +26,7 @@
           <li><a href="contacto.html">Contact</a></li>
           <li><a href="alianzas.html">Partnerships</a></li>
           <li><a href="equipo.html">Team</a></li>
+          <li><a href="organizaciones.html">Organizations</a></li>
         </ul>
       </nav>
     </div>
@@ -34,58 +35,62 @@
 <main>
   <section id="community-status">
     <div class="status-panel glass-effect">
-      <h2 style="margin-bottom: 2rem;"><i class="fas fa-signal"></i> Community Status</h2>
+      <h2 style="margin-bottom: 2rem; color: #dc3545;"><i class="fas fa-power-off"></i> Systems Shutdown</h2>
 
       <div class="services-status">
         
-        <div class="service" style="border-left: 4px solid #dc3545;"> <div class="service-header">
+        <div class="service" style="border-left: 4px solid #dc3545; opacity: 0.8;"> 
+          <div class="service-header">
             <span class="service-name"><i class="fas fa-gamepad"></i> Roblox</span>
-            <i class="fas fa-exclamation-triangle" id="roblox-status" style="color: #dc3545; font-size: 1.5rem;"></i>
+            <i class="fas fa-ban" id="roblox-status" style="color: #dc3545; font-size: 1.5rem;"></i>
           </div>
           <p class="service-error" id="roblox-error" style="color: #ff6b6b;">
-            <strong>Status: Banned</strong><br>
-            VeluxeAparelo account banned for 6 months.<br>
-            Ban date: Aug 10, 2025, 3:31 PM.<br>
-            Reactivation in: <span id="roblox-countdown" style="font-family: monospace; font-weight: bold; color: white;">Loading...</span>
+            <strong>Status: Discontinued</strong><br>
+            VeluxeAparelo operations on Roblox have ceased.<br>
+            Account Banned. No return date scheduled.
           </p>
         </div>
 
-        <div class="service" style="border-left: 4px solid #4ade80;"> <div class="service-header">
+        <div class="service" style="border-left: 4px solid #dc3545; opacity: 0.8;"> 
+          <div class="service-header">
             <span class="service-name"><i class="fab fa-discord"></i> Discord</span>
-            <i class="fas fa-check-circle" id="discord-status" style="color: #4ade80; font-size: 1.5rem;"></i>
+            <i class="fas fa-times-circle" id="discord-status" style="color: #dc3545; font-size: 1.5rem;"></i>
           </div>
-          <p class="service-error" style="color: #4ade80;">
-            All systems operational. Staff fully active.
+          <p class="service-error" style="color: #ff6b6b;">
+            <strong>Status: Offline</strong><br>
+            Server is currently offline. Staff inactive.
           </p>
         </div>
 
-        <div class="service" style="border-left: 4px solid #4ade80;">
+        <div class="service" style="border-left: 4px solid #dc3545; opacity: 0.8;">
           <div class="service-header">
             <span class="service-name"><i class="fas fa-cube"></i> Minecraft</span>
-            <i class="fas fa-check-circle" id="minecraft-status" style="color: #4ade80; font-size: 1.5rem;"></i>
+            <i class="fas fa-times-circle" id="minecraft-status" style="color: #dc3545; font-size: 1.5rem;"></i>
           </div>
-          <p class="service-error" style="color: #4ade80;">
-            Server online and operational.
+          <p class="service-error" style="color: #ff6b6b;">
+            <strong>Status: Offline</strong><br>
+            Server closed indefinitely.
           </p>
         </div>
 
-        <div class="service" style="border-left: 4px solid #4ade80;">
+        <div class="service" style="border-left: 4px solid #dc3545; opacity: 0.8;">
           <div class="service-header">
             <span class="service-name"><i class="fas fa-server"></i> Central Discord Server</span>
-            <i class="fas fa-check-circle" id="central-status" style="color: #4ade80; font-size: 1.5rem;"></i>
+            <i class="fas fa-times-circle" id="central-status" style="color: #dc3545; font-size: 1.5rem;"></i>
           </div>
-          <p class="service-error" style="color: #4ade80;">
-            Operational.
+          <p class="service-error" style="color: #ff6b6b;">
+            <strong>Status: Discontinued</strong><br>
+            Operations halted.
           </p>
         </div>
       </div>
       
       <div style="text-align: center; margin-top: 2rem;">
-        <button id="refresh-status" class="discord-btn"><i class="fas fa-sync-alt"></i> Refresh Status</button>
+        <button id="refresh-status" class="discord-btn" style="background-color: #333; cursor: not-allowed; opacity: 0.5;">No Signal</button>
       </div>
       
       <p style="text-align: center; font-size: 0.8rem; color: #666; margin-top: 10px;">
-        Updates automatically every second.
+        Last update: System Halting...
       </p>
 
     </div>
